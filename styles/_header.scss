@@ -1,0 +1,45 @@
+.header {
+    width: 100%;
+
+    &__nav {
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__link {
+        width: 10%;
+        margin-left: 30px;
+    }
+
+    &__logo {
+        width: 80%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__categories {
+        display: flex;
+        width: 55%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__item {
+        font-family: $primary-font;
+        text-decoration: none;
+        color: $font-color;
+        font-weight: bolder;
+        font-weight: 400;
+    }
+
+    &__icons {
+        margin-right: 20px;
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
