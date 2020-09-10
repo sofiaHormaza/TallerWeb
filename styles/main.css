@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap");
 body {
   height: 100vh;
@@ -34,7 +34,7 @@ body {
 }
 
 .header__logo {
-  width: 80%;
+  width: 70%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -55,7 +55,7 @@ body {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #515A62;
-  font-weight: bolder;
+  font-size: 1.2em;
   font-weight: 400;
 }
 
@@ -67,5 +67,48 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 85vh;
+  background-image: url("/images/imgBanner.png");
+  background-position: 50% 35%;
+  background-size: cover;
+}
+
+.banner__info {
+  padding: 40px;
+}
+
+.banner__title {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 4.5em;
+  margin: 0px;
+}
+
+.banner__subtitle {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  margin: 0px;
+  padding-bottom: 15px;
+}
+
+.primaryButton {
+  border: 0;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  font-weight: 800;
+  color: #515A62;
+  letter-spacing: 0.1em;
+  padding: 0.8em 1.5em;
 }
 /*# sourceMappingURL=main.css.map */
