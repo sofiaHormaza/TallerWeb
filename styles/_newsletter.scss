@@ -1,0 +1,41 @@
+.newsletter {
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        width: 35%;
+        padding: 70px 0px;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 20px;
+        color: $font-color;
+    }
+
+    &__description {
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 15px;
+        color: $font-color;
+        padding: 20px 0px;
+    }
+
+    &__subscription {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__input{
+        border: none;
+
+        &::placeholder{
+            font-family: $primary-font;
+            font-weight: 400;
+            padding-left: 20px;
+        }
+    }
+}

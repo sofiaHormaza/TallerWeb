@@ -1,0 +1,52 @@
+.ad {
+    width: 100%;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: roww;
+    
+
+    &__collection {
+        width: 70%;
+        position: relative;
+    }
+
+    &__name {
+        font-family: $secondary-font;
+        font-size: 130px;
+        color: white;
+        line-height: 100%;
+        margin-left: 150px;
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+    &__image {
+        width: 85%;
+        position: absolute;
+        top: 70px;
+        left:295px
+    }
+
+    &__info {
+        width: 30%;
+        text-align: right;
+        margin-right: 100px;
+        margin-top: 50px;
+        color: white;
+    }
+
+    &__title {
+        font-family: $primary-font;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+
+    &__description {
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 18px;
+    }
+}
