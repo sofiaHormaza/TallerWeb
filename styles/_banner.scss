@@ -13,14 +13,15 @@
     &__title {
         color: white;
         font-family: $secondary-font;
-        font-size: 4.5em;
+        font-size: 75px;
         margin: 0px;
     }
 
     &__subtitle {
         color: white;
         font-family: $primary-font;
-        font-size: 1.6em;
+        font-weight: 600;
+        font-size: 26px;
         margin: 0px;
         padding-bottom: 15px;
     }

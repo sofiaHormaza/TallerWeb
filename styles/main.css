@@ -53,7 +53,7 @@ body {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #515a62;
-  font-size: 1.2em;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -87,14 +87,15 @@ body {
 .banner__title {
   color: white;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 4.5em;
+  font-size: 75px;
   margin: 0px;
 }
 
 .banner__subtitle {
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.6em;
+  font-weight: 600;
+  font-size: 26px;
   margin: 0px;
   padding-bottom: 15px;
 }
@@ -103,24 +104,78 @@ body {
   border: 0;
   background-color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.9em;
+  font-size: 15px;
   font-weight: 700;
-  color: #515a62;
-  letter-spacing: 0.1em;
-  padding: 0.8em 1.5em;
+  color: #454545;
+  letter-spacing: 1px;
+  padding: 11px 24px;
 }
 
 .gallery {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .gallery__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 25px;
   color: #515a62;
   padding: 60px;
   margin: 0;
   text-align: center;
+}
+
+.ad {
+  width: 100%;
+  background-color: #98dec8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: roww;
+          flex-direction: roww;
+}
+
+.ad__collection {
+  width: 75%;
+  position: relative;
+}
+
+.ad__name {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 130px;
+  color: white;
+  line-height: 100%;
+  margin-left: 150px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.ad__image {
+  width: 85%;
+  position: absolute;
+  top: 45px;
+  left: 270px;
+}
+
+.ad__info {
+  width: 25%;
+  text-align: right;
+  margin-right: 100px;
+  margin-top: 50px;
+  color: white;
+}
+
+.ad__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.ad__description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=main.css.map */

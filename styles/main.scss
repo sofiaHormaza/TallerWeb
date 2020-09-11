@@ -4,10 +4,63 @@
 $primary-font: "Montserrat", sans-serif;
 $secondary-font: "Barlow Condensed", sans-serif;
 $font-color: #515a62;
-$primary-color: #F2F2F2;
+
+$primary-color: #f2f2f2;
+$secondary-color: #98dec8;
 
 @import "general";
 @import "header";
 @import "banner";
 @import "button";
 @import "gallery";
+
+
+.ad {
+    width: 100%;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: roww;
+    
+
+    &__collection {
+        width: 75%;
+        position: relative;
+    }
+
+    &__name {
+        font-family: $secondary-font;
+        font-size: 130px;
+        color: white;
+        line-height: 100%;
+        margin-left: 150px;
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+    &__image {
+        width: 85%;
+        position: absolute;
+        top: 45px;
+        left:270px
+    }
+
+    &__info {
+        width: 25%;
+        text-align: right;
+        margin-right: 100px;
+        margin-top: 50px;
+        color: white;
+    }
+
+    &__title {
+        font-family: $primary-font;
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    &__description {
+        font-family: $primary-font;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
