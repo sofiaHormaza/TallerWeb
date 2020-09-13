@@ -435,8 +435,58 @@ body {
   margin-bottom: 18px;
 }
 
-.features {
+.feature {
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.feature__info {
+  width: 50%;
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feature__info--left {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.feature__container {
+  margin: auto;
+  width: 66%;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+}
+
+.feature__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.feature__title {
+  font-weight: 600;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.feature__text {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.feature__image {
+  width: 50%;
+}
+
+.feature__image img {
+  display: block;
 }
 
 .newsletter {
