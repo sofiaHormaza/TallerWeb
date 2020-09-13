@@ -1,21 +1,18 @@
-.primaryButton {
+@mixin btnStyle($color: #454545, $bg: white) {
+    background-color: $bg;
+    color: $color;
     border: 0;
-    background-color: white;
     font-family: $primary-font;
     font-size: 15px;
     font-weight: 700;
-    color: #454545;
     letter-spacing: 1px;
     padding: 11px 24px;
 }
 
-.secondaryButton{
-    border: 0;
-    background-color: #515a62;
-    font-family: $primary-font;
-    font-size: 15px;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 1px;
-    padding: 11px 24px;
+.button {
+    @include btnStyle();
+
+    &--secondary {
+        @include btnStyle(white, #515a62);
+    }
 }

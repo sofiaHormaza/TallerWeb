@@ -342,33 +342,7 @@ body {
   padding-bottom: 15px;
 }
 
-.primaryButton {
-  border: 0;
-  background-color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #454545;
-  letter-spacing: 1px;
-  padding: 11px 24px;
-}
-
-.secondaryButton {
-  border: 0;
-  background-color: #515a62;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 1px;
-  padding: 11px 24px;
-}
-
-.gallery {
-  background-color: #f2f2f2;
-}
-
-.gallery__title {
+.section-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 25px;
@@ -376,6 +350,32 @@ body {
   padding: 60px;
   margin: 0;
   text-align: center;
+}
+
+.button {
+  background-color: white;
+  color: #454545;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 11px 24px;
+}
+
+.button--secondary {
+  background-color: #515a62;
+  color: white;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 11px 24px;
+}
+
+.gallery {
+  background-color: #f2f2f2;
 }
 
 .ad {
@@ -437,16 +437,6 @@ body {
 
 .features {
   background-color: white;
-}
-
-.features__title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 25px;
-  color: #515a62;
-  padding: 60px;
-  margin: 0;
-  text-align: center;
 }
 
 .newsletter {
