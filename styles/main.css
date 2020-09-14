@@ -451,7 +451,7 @@ body {
   display: flex;
 }
 
-.feature__info--left {
+.feature__info--right {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -487,6 +487,47 @@ body {
 
 .feature__image img {
   display: block;
+}
+
+.table {
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+}
+
+.table__container {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table__title {
+  border-bottom: 1px solid #515a62;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  padding-right: 50px;
+  white-space: nowrap;
+}
+
+.table__title--last {
+  border-bottom: none;
+}
+
+.table__info {
+  border-bottom: 1px solid #515a62;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.table__info--last {
+  border-bottom: none;
 }
 
 .newsletter {

@@ -1,0 +1,37 @@
+@mixin rowProperties {
+    border-bottom: 1px solid #515a62;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.table {
+    font-family: $primary-font;
+    color: $font-color;
+
+    &__container {
+        width: 70%;
+        margin: auto;
+        padding-bottom: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        @include rowProperties();
+        padding-right: 50px;
+        white-space: nowrap;
+
+        &--last {
+            border-bottom: none;
+        }
+    }
+
+    &__info {
+        @include rowProperties();
+
+        &--last {
+            border-bottom: none;
+        }
+    }
+}
