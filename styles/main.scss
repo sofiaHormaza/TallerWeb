@@ -19,48 +19,4 @@ $secondary-color: #98dec8;
 @import "features";
 @import "table";
 @import "newsletter";
-
-.footer{
-    display: flex;
-    justify-content: center; 
-    font-family: $primary-font;  
-
-    &__container{
-        width:60%;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    &__block-links{
-        display: flex;
-        flex-direction: column;
-        padding-top: 50px;
-        padding-bottom: 50px;
-
-        &--side{
-            display: inline-block;
-            color: $font-color;
-        }
-    }
-
-    &__title{
-        color: $font-color;
-        font-weight: 700;
-        padding-bottom: 10px;
-    }
-
-    &__link{
-        text-decoration: none;
-        color: $font-color;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        font-weight: 400;
-
-        &--side{
-            text-decoration: none;
-            margin-right: 15px;
-        }
-    }
-
-}
-
+@import "footer";
