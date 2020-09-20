@@ -16,3 +16,10 @@
         @include btnStyle(white, #515a62);
     }
 }
+
+@media (max-width: 425px) {
+    .button{
+        font-size: 11px;
+        padding: 10px 14px;
+    }
+}
