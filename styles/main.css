@@ -410,10 +410,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: roww;
-          flex-direction: roww;
 }
 
 .ad__collection {
@@ -432,10 +428,10 @@ body {
 }
 
 .ad__image {
-  width: 85%;
+  width: 65%;
   position: absolute;
   top: 70px;
-  left: 295px;
+  left: 390px;
 }
 
 .ad__info {
@@ -459,6 +455,39 @@ body {
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 18px;
+}
+
+@media (max-width: 425px) {
+  .ad {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ad__collection {
+    width: 100%;
+  }
+  .ad__name {
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+  }
+  .ad__image {
+    width: 50%;
+    left: 135px;
+    top: 40px;
+  }
+  .ad__info {
+    width: 70%;
+    margin: 20px 50px 30px auto;
+  }
+  .ad__title {
+    font-size: 23px;
+  }
+  .ad__description {
+    font-size: 12px;
+  }
 }
 
 .feature {
