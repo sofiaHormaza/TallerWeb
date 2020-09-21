@@ -380,6 +380,7 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   padding: 11px 24px;
+  white-space: nowrap;
 }
 
 .button--secondary {
@@ -391,6 +392,7 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
   padding: 11px 24px;
+  white-space: nowrap;
 }
 
 @media (max-width: 425px) {
@@ -695,6 +697,34 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   padding-left: 20px;
+}
+
+@media (max-width: 425px) {
+  .newsletter__container {
+    width: 75%;
+    padding: 40px 0px;
+  }
+  .newsletter__title {
+    font-size: 16px;
+  }
+  .newsletter__description {
+    font-size: 13px;
+  }
+  .newsletter__input {
+    width: 75%;
+  }
+  .newsletter__input::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .newsletter__input:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .newsletter__input::-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .newsletter__input::placeholder {
+    font-size: 12px;
+  }
 }
 
 .footer {

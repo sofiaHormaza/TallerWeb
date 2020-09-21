@@ -39,3 +39,27 @@
         }
     }
 }
+
+@media (max-width: 425px) {
+    .newsletter {
+        &__container {
+            width: 75%;
+            padding: 40px 0px;
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__description {
+            font-size: 13px;
+        }
+
+        &__input {
+            width: 75%;
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+    }
+}
