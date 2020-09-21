@@ -30,15 +30,15 @@
 @media (max-width: 425px) {
     .banner {
         &__info {
-            //padding: 20px;
+            padding: 35px;
         }
 
-        &__title{
+        &__title {
             font-size: 40px;
         }
 
-        &__subtitle{
-            font-size: 15px
+        &__subtitle {
+            font-size: 15px;
         }
     }
 }
