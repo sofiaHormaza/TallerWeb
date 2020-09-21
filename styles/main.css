@@ -617,6 +617,18 @@ body {
   border-bottom: none;
 }
 
+@media (max-width: 425px) {
+  .table__container {
+    width: 80%;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  .table__title {
+    padding-right: 20px;
+  }
+}
+
 .newsletter {
   background-color: #98dec8;
   display: -webkit-box;

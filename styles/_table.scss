@@ -35,3 +35,18 @@
         }
     }
 }
+
+@media (max-width: 425px) {
+    .table {
+        &__container {
+            width: 80%;
+            font-size: 12px;
+            padding-bottom: 30px;
+            padding-top: 10px;
+        }
+
+        &__title {
+            padding-right: 20px;
+        }
+    }
+}
