@@ -1,4 +1,48 @@
 .gallery {
     background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+
+    &__arrow{
+        width: 36px;
+        cursor: pointer;
+        align-self: center;
+        margin: 0px 20px 100px 20px;
+    }
+
+    &__container{
+        overflow: hidden;
+        width: 1020px;
+        padding-bottom: 100px;
+    }
+
+    &__stripe{
+        display: flex;
+    }
+
+    &__product{
+        font-family: $primary-font;
+        background-color: white;
+        text-align: center;
+        margin: 0px 20px;
+        padding: 50px 0px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        img {
+            width: 300px;
+            max-width: none;
+        }
+
+        p {
+            color: $font-color;
+            font-weight: 400;
+            padding-bottom: 2px;
+        }
+
+        a {
+            color: $font-color;
+            font-weight: 600;
+        }
+    }
 }
 
