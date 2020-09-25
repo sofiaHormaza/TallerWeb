@@ -8,13 +8,27 @@
     letter-spacing: 1px;
     padding: 11px 24px;
     white-space: nowrap;
+    outline: none;
 }
 
 .button {
-    @include btnStyle();
+    &--primary {
+        @include btnStyle();
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: inset 0px 0px 0px 1px #515a62;
+        }
+    }
 
     &--secondary {
         @include btnStyle(white, #515a62);
+
+        &:hover {
+            background-color: rgba(81, 90, 98, 0.7);
+            box-shadow: inset 0px 0px 0px 1px white;
+            color: white;
+        }
     }
 }
 

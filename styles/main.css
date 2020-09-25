@@ -381,7 +381,7 @@ body {
   }
 }
 
-.button {
+.button--primary {
   background-color: white;
   color: #454545;
   border: 0;
@@ -391,6 +391,13 @@ body {
   letter-spacing: 1px;
   padding: 11px 24px;
   white-space: nowrap;
+  outline: none;
+}
+
+.button--primary:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: inset 0px 0px 0px 1px #515a62;
+          box-shadow: inset 0px 0px 0px 1px #515a62;
 }
 
 .button--secondary {
@@ -403,6 +410,14 @@ body {
   letter-spacing: 1px;
   padding: 11px 24px;
   white-space: nowrap;
+  outline: none;
+}
+
+.button--secondary:hover {
+  background-color: rgba(81, 90, 98, 0.7);
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+          box-shadow: inset 0px 0px 0px 1px white;
+  color: white;
 }
 
 @media (max-width: 425px) {
