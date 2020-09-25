@@ -3,26 +3,26 @@
     display: flex;
     justify-content: center;
 
-    &__arrow{
+    &__arrow {
         width: 36px;
         cursor: pointer;
         align-self: center;
         margin: 0px 20px 100px 20px;
     }
 
-    &__container{
+    &__container {
         overflow: hidden;
         width: 75%;
         padding-bottom: 100px;
     }
 
-    &__stripe{
+    &__stripe {
         display: flex;
-        transition: transform .6s ease;
+        transition: transform 0.6s ease;
     }
 
-    &__product{
-        width:29.5%;
+    &__product {
+        width: 29.5%;
         font-family: $primary-font;
         background-color: white;
         text-align: center;
@@ -44,3 +44,30 @@
     }
 }
 
+@media (max-width: 425px) {
+    .gallery {
+        &__arrow {
+            width: 20px;
+            margin: 10px 20px 50px 20px;
+        }
+
+        &__container {
+            padding-bottom: 50px;
+            padding-top: 10px;
+        }
+
+        &__product {
+            width: 90%;
+            margin: 0px 10px;
+            padding: 30px 0px;
+
+            p {
+                font-size: 13px;
+            }
+
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+}

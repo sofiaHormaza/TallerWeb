@@ -38,9 +38,9 @@ leftArrow.addEventListener('click', function () {
 
 //Slider
 const slider = document.querySelector('.feature__slider');
-const img = document.querySelector ('.feature__compare img:nth-child(2)');
+const img = document.querySelector('.feature__compare img:nth-child(2)');
 
-function handleSlider(){
+function handleSlider() {
     img.style.width = (slider.value * 100) + '%';
 }
 slider.addEventListener('input', handleSlider);
