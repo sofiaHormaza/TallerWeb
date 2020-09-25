@@ -897,6 +897,8 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer__block-links {
@@ -933,5 +935,22 @@ body {
 .footer__link--side {
   text-decoration: none;
   margin-right: 15px;
+}
+
+@media (max-width: 425px) {
+  .footer__container {
+    font-size: 12px;
+    width: 70%;
+  }
+  .footer__block-links {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+  .footer__block-links--side {
+    padding-bottom: 20px;
+  }
+  .footer__block-links--side img {
+    width: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

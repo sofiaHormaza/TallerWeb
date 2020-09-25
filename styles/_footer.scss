@@ -1,43 +1,64 @@
-.footer{
+.footer {
     display: flex;
-    justify-content: center; 
-    font-family: $primary-font;  
+    justify-content: center;
+    font-family: $primary-font;
 
-    &__container{
-        width:60%;
+    &__container {
+        width: 60%;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
-    &__block-links{
+    &__block-links {
         display: flex;
         flex-direction: column;
         padding-top: 50px;
         padding-bottom: 50px;
 
-        &--side{
+        &--side {
             display: inline-block;
             color: $font-color;
         }
     }
 
-    &__title{
+    &__title {
         color: $font-color;
         font-weight: 700;
         padding-bottom: 10px;
     }
 
-    &__link{
+    &__link {
         text-decoration: none;
         color: $font-color;
         margin-top: 5px;
         margin-bottom: 5px;
         font-weight: 400;
 
-        &--side{
+        &--side {
             text-decoration: none;
             margin-right: 15px;
         }
     }
+}
 
+@media (max-width: 425px) {
+    .footer {
+        &__container {
+            font-size: 12px;
+            width: 70%;
+        }
+
+        &__block-links {
+            padding-top: 20px;
+            padding-bottom: 0px;
+
+            &--side {
+                padding-bottom: 20px;
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
 }
