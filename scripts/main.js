@@ -1,3 +1,5 @@
+
+//Carrousel gallery
 const galleryStripe = document.querySelector('.gallery__stripe');
 const rightArrow = document.querySelector('.gallery__arrow:last-child');
 const leftArrow = document.querySelector('.gallery__arrow:first-child');
