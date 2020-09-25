@@ -4,7 +4,6 @@ const leftArrow = document.querySelector('.gallery__arrow:first-child');
 const product = document.querySelector('.gallery__product');
 let current = 0;
 
-
 rightArrow.addEventListener('click', function () {
     current++;
     if (current >= galleryStripe.children.length - 2) {
@@ -33,3 +32,13 @@ leftArrow.addEventListener('click', function () {
     console.log(current);
 })
 
+
+
+//Slider
+const slider = document.querySelector('.feature__slider');
+const img = document.querySelector ('.feature__compare img:nth-child(2)');
+
+function handleSlider(){
+    img.style.width = (slider.value * 100) + '%';
+}
+slider.addEventListener('input', handleSlider);

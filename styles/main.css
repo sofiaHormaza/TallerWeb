@@ -604,6 +604,30 @@ body {
   display: block;
 }
 
+.feature__compare {
+  width: 50%;
+  position: relative;
+}
+
+.feature__compare img {
+  display: block;
+}
+
+.feature__compare img:nth-child(2) {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  top: 0px;
+}
+
+.feature__slider {
+  position: absolute;
+}
+
 @media (max-width: 425px) {
   .feature {
     -webkit-box-orient: vertical;
@@ -634,6 +658,9 @@ body {
   }
   .feature__text {
     font-size: 12px;
+  }
+  .feature__compare {
+    width: 100%;
   }
 }
 
