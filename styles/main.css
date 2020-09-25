@@ -607,6 +607,12 @@ body {
 .feature__compare {
   width: 50%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .feature__compare img {
@@ -615,7 +621,7 @@ body {
 
 .feature__compare img:nth-child(2) {
   position: absolute;
-  width: 0%;
+  width: 50%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -626,6 +632,22 @@ body {
 
 .feature__slider {
   position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: aqua;
+  height: 0px;
+  outline: none;
+  width: 100%;
+}
+
+.feature__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: e-resize;
 }
 
 @media (max-width: 425px) {
