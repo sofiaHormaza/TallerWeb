@@ -13,6 +13,14 @@
         justify-content: space-between;
         position: fixed;
         z-index: 1;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__burger-menu {
+        display: none;
     }
 
     &__link {
@@ -41,10 +49,37 @@
         font-weight: 400;
     }
 
-    &__icons {
-        margin-right: 20px;
-        width: 10%;
-        display: flex;
-        justify-content: space-around;
+    &__icon-shop {
+        width: 5%;
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        &__nav {
+            &--hidden {
+                display: block;
+            }
+        }
+
+        &__burger-menu {
+            display: block;
+            width: 10%;
+            margin-left: 20px;
+        }
+
+        &__link {
+            width: 30%;
+            margin-left: 20px;
+        }
+
+        &__categories {
+            display: none;
+        }
+
+        &__icon-shop {
+            width: 5.5%;
+            margin-right: 20px;
+        }
     }
 }

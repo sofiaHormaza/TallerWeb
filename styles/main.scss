@@ -9,9 +9,9 @@ $primary-color: #f2f2f2;
 $secondary-color: #98dec8;
 
 @import "_reset";
-@import "_general";
 @import "_header";
 @import "_banner";
+@import "_burger-menu";
 @import "_section-title";
 @import "_button";
 @import "_gallery";
@@ -20,3 +20,4 @@ $secondary-color: #98dec8;
 @import "_table";
 @import "_newsletter";
 @import "_footer";
+@import '_opacity';
