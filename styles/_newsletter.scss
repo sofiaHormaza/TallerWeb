@@ -29,11 +29,11 @@
         justify-content: center;
     }
 
-    &__input{
+    &__input {
         border: none;
         outline: none;
 
-        &::placeholder{
+        &::placeholder {
             font-family: $primary-font;
             font-weight: 400;
             padding-left: 20px;
