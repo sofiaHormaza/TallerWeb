@@ -49,8 +49,28 @@
         font-weight: 400;
     }
 
-    &__icon-shop {
-        width: 5%;
+    &__icons {
+        margin-right: 20px;
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__iconLink {
+        display: flex;
+        align-self: center;
+        &:last-child {
+            font-family: $primary-font;
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+    }
+
+    &__number {
+        margin-left: 5px;
+        display: flex;
+        align-self: center;
     }
 }
 
@@ -78,9 +98,15 @@
             display: none;
         }
 
-        &__icon-shop {
-            width: 5.5%;
-            margin-right: 20px;
+        &__iconLink {
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                width: 55%;
+                font-size: 15px;
+            }
         }
+        
     }
 }
