@@ -1089,6 +1089,15 @@ input[type=button] {
   display: block;
 }
 
+.opacity--show {
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 425px) {
   .opacity--show {
     position: fixed;
@@ -1238,6 +1247,7 @@ input[type=button] {
 .products__title {
   font-weight: 600;
   font-size: 20px;
+  text-transform: uppercase;
 }
 
 .products__price {
@@ -1255,6 +1265,112 @@ input[type=button] {
           flex-direction: column;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  color: #515a62;
+}
+
+.edit-add {
+  display: none;
+}
+
+.edit-add--show {
+  display: block;
+  width: 55%;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5% 10%;
+  background-color: white;
+  z-index: 4;
+}
+
+.edit-add__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.edit-add__two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-add__two select {
+  width: 47%;
+}
+
+.edit-add form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.edit-add textarea {
+  margin-bottom: 20px;
+}
+
+.edit-add input {
+  margin-bottom: 20px;
+}
+
+.edit-add select {
+  margin-bottom: 20px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #5c646b;
+  border: 1px solid #515a62;
+}
+
+.input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 11px 54px 11px 10px;
+  background: url("../images/down.png") no-repeat;
+  background-size: 15px;
+  background-position: 95% 50%;
+  background-color: white;
   color: #515a62;
 }
 /*# sourceMappingURL=main.css.map */

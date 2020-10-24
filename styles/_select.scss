@@ -1,0 +1,10 @@
+.select {
+    appearance: none;
+    font-family: $primary-font;
+    padding: 11px 54px 11px 10px;
+    background: url("../images/down.png") no-repeat;
+    background-size: 15px;
+    background-position: 95% 50%;
+    background-color: white;
+    color: $font-color;
+}
