@@ -1218,8 +1218,9 @@ input[type=button] {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .products__remove {
@@ -1233,7 +1234,7 @@ input[type=button] {
 
 .products__glasses {
   width: 300px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .products__glasses button {
@@ -1306,7 +1307,7 @@ input[type=button] {
   width: 47%;
 }
 
-.edit-add form {
+.edit-add__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

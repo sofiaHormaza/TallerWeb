@@ -2,7 +2,7 @@
     width: 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &__remove {
         font-family: $primary-font;
@@ -15,7 +15,7 @@
 
     &__glasses {
         width: 300px;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
 
         button {
             text-align: center;
