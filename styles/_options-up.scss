@@ -1,0 +1,26 @@
+.options-up {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 30px 0px;
+
+    h4 {
+        width: 20%;
+        font-family: $primary-font;
+        color: $font-color;
+        font-weight: 500;
+        border-bottom: 1px solid #515a62;
+        padding-top: 10px;
+    }
+
+    &__order {
+        appearance: none;
+        font-family: $primary-font;
+        padding: 11px 54px 11px 10px;
+        margin-left: 20px;
+        background: url("../images/down.png") no-repeat;
+        background-size: 7%;
+        background-position: 95% 50%;
+    }
+}

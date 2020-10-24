@@ -90,6 +90,7 @@
   font-size: 20px;
   text-decoration: none;
   margin-left: 5px;
+  color: #515a62;
 }
 
 .header__number {
@@ -1017,6 +1018,7 @@ input[type=button] {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: "Montserrat", sans-serif;
+  border-top: 1px solid #515a62;
 }
 
 .footer__container {
@@ -1097,5 +1099,162 @@ input[type=button] {
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.5);
   }
+}
+
+.products-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 50vh;
+  background-image: url("../images/sun-banner.jpg");
+  background-position: 50% 41.5%;
+  background-size: cover;
+}
+
+.products-banner h1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 60px;
+  padding: 20px 40px;
+}
+
+.options-up {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px 0px;
+}
+
+.options-up h4 {
+  width: 20%;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+  font-weight: 500;
+  border-bottom: 1px solid #515a62;
+  padding-top: 10px;
+}
+
+.options-up__order {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 11px 54px 11px 10px;
+  margin-left: 20px;
+  background: url("../images/down.png") no-repeat;
+  background-size: 7%;
+  background-position: 95% 50%;
+}
+
+.filters {
+  width: 20%;
+}
+
+.filters__group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  color: #515a62;
+}
+
+.filters p {
+  margin-bottom: 20px;
+}
+
+.filters__label {
+  margin-bottom: 10px;
+  padding-right: 100px;
+  vertical-align: middle;
+}
+
+.containerP {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px 0px;
+}
+
+.products {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.products__remove {
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: end;
+  margin-right: 10px;
+}
+
+.products__glasses {
+  width: 300px;
+  margin-bottom: 40px;
+}
+
+.products__glasses button {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 60%;
+}
+
+.products__title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.products__price {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.products__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #515a62;
 }
 /*# sourceMappingURL=main.css.map */

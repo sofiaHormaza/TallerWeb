@@ -1,0 +1,45 @@
+.products {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__remove {
+        font-family: $primary-font;
+        color: $font-color;
+        text-decoration: underline;
+        cursor: pointer;
+        text-align: end;
+        margin-right: 10px;
+    }
+
+    &__glasses {
+        width: 300px;
+        margin-bottom: 40px;
+
+        button {
+            text-align: center;
+            align-self: center;
+            width: 60%;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__price {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        font-family: $primary-font;
+        text-align: center;
+        color: $font-color;
+    }
+
+}
