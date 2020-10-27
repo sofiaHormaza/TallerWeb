@@ -1317,18 +1317,6 @@ input[type=button] {
           flex-direction: column;
 }
 
-.edit-add textarea {
-  margin-bottom: 20px;
-}
-
-.edit-add input {
-  margin-bottom: 20px;
-}
-
-.edit-add select {
-  margin-bottom: 20px;
-}
-
 .input {
   border: none;
   outline: none;
@@ -1336,6 +1324,7 @@ input[type=button] {
   font-family: "Montserrat", sans-serif;
   color: #5c646b;
   border: 1px solid #515a62;
+  margin-bottom: 20px;
 }
 
 .input::-webkit-input-placeholder {
@@ -1373,5 +1362,57 @@ input[type=button] {
   background-position: 95% 50%;
   background-color: white;
   color: #515a62;
+  margin-bottom: 20px;
+}
+
+.login {
+  width: 100%;
+  height: 90vh;
+  background-color: #98dec8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+}
+
+.login__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+.login__link {
+  color: #515a62;
+  font-weight: 600;
+}
+
+.login h1 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.login p {
+  margin-bottom: 20px;
+}
+
+.login button {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */
