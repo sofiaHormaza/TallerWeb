@@ -1415,4 +1415,90 @@ input[type=button] {
 .form button {
   margin-bottom: 20px;
 }
+
+.profile {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profile__account {
+  width: 30%;
+  background-color: #98dec8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile__container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile__container button {
+  margin-bottom: 40px;
+}
+
+.profile__hello {
+  color: white;
+  font-size: 40px;
+  padding: 60px 0px;
+  height: 40vh;
+}
+
+.profile__hello h2 {
+  font-weight: 600;
+}
+
+.profile__info {
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 20px 60px 20px 20px;
+  margin-bottom: 40px;
+  color: #515a62;
+}
+
+.profile__info h4 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.profile__info h5 {
+  font-weight: 500;
+}
+
+.profile__info p {
+  margin-bottom: 20px;
+}
+
+.profile__orders {
+  width: 70%;
+  background-color: #f2f2f2;
+}
+
+.profile__orders h1 {
+  font-size: 40px;
+  color: #515a62;
+  font-weight: 600;
+  margin: 40px;
+}
 /*# sourceMappingURL=main.css.map */

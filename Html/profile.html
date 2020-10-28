@@ -33,17 +33,29 @@
     </header>
 
 
-    <article class="login form">
-        <h1>LOGIN</h1>
-        <p>Please enter your email and password</p>
-        <form class="form__info login__info">
-            <input placeholder="Email" name="email" type="email" class="input">
-            <input placeholder="Password" name="password" type="password" class="input">
-            <button class="button button--secondary">LOGIN</button>
-        </form>
-        <p>Don’t have an account?
-            <a href="../Html/register.html"  class="form__link">Create one</a>
-        </p>
+    <article class="profile">
+        <section class="profile__account">
+            <div class="profile__container">
+                <div class="profile__hello">
+                    <h3>Hello,</h3>
+                    <h2 class="username">Username</h2>
+                </div>
+
+                <div class="profile__info">
+                    <h4>My profile</h4>
+                    <h5>Username:</h5>
+                    <p class="profile__username">myusername123</p>
+                    <h5>Email:</h5>
+                    <p class="profile__email">username@gmail.com</p>
+                </div>
+
+                <button class="button button--secondary">LOG OUT</button>
+            </div>
+        </section>
+
+        <section class="profile__orders">
+            <h1>My orders</h1>
+        </section>
     </article>
 
 
@@ -78,13 +90,6 @@
             </section>
         </div>
     </footer>
-
-
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-    <script src="../scripts/firebaseConfig.js"></script>
-    <script src="../scripts/login.js"></script>
 </body>
 
 </html>

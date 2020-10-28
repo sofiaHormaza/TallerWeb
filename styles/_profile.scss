@@ -1,0 +1,69 @@
+.profile {
+    width: 100%;
+    font-family: $primary-font;
+    display: flex;
+    flex-direction: row;
+
+    &__account {
+        width: 30%;
+        background-color: $secondary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__hello {
+        color: white;
+        font-size: 40px;
+        padding: 60px 0px;
+        height: 40vh;
+
+        h2 {
+            font-weight: 600;
+        }
+    }
+
+    &__info {
+        border: 3px solid white;
+        border-radius: 20px;
+        padding: 20px 60px 20px 20px;
+        margin-bottom: 40px;
+        color: $font-color;
+
+        h4 {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__orders {
+        width: 70%;
+        background-color: $primary-color;
+
+        h1 {
+            font-size: 40px;
+            color: $font-color;
+            font-weight: 600;
+            margin: 40px;
+        }
+    }
+}
