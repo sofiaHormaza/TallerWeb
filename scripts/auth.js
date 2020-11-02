@@ -4,9 +4,12 @@ userName = document.querySelector('.profile__usernameB');
 userName2 = document.querySelector('.profile__username');
 emailP = document.querySelector('.profile__email');
 
-
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+        const loader = document.querySelector('.loader');
+        if (window.location.href.indexOf("profile") > -1){
+            loader.classList.add('loader--show');
+        }
         if (window.location.href.indexOf("index") > -1) {
             auth.href = './Html/profile.html';
         } else {
@@ -22,6 +25,7 @@ firebase.auth().onAuthStateChanged(function (user) {
                 userName.innerText = data.username + '!';
                 userName2.innerText = data.username;
                 emailP.innerText = data.email;
+                loader.classList.remove('loader--show');
               }
             });
         }

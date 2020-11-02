@@ -114,7 +114,7 @@
             <input placeholder="Image url" name="imgUrl" type="url" class="input">
 
             <select name="shape" class="select">
-                <option selected="selected" disabled="disabled">Frame shape</option>
+                <option value="no" selected="selected" disabled="disabled">Frame shape</option>
                 <option value="round">Round</option>
                 <option value="rectangle">Rectangle</option>
                 <option value="pilot">Pilot/ Aviator</option>
@@ -123,13 +123,13 @@
 
             <div class="edit-add__two">
                 <select name="gender" class="select">
-                    <option selected="selected" disabled="disabled">Gender</option>
+                    <option value="no" selected="selected" disabled="disabled">Gender</option>
                     <option value="men">Men</option>
                     <option value="women">Women</option>
                 </select>
 
                 <select name="type" class="select">
-                    <option selected="selected" disabled="disabled">Type</option>
+                    <option value="no" selected="selected" disabled="disabled">Type</option>
                     <option value="sun">Sunglasses</option>
                     <option value="optical">Optical</option>
                 </select>
@@ -138,6 +138,14 @@
                 Confirm
             </button>
         </form>
+    </article>
+
+
+    <article class="loader">
+        <div class="loader__container">
+            <img src="../images/loader.gif" alt="">
+            <p>LOADING</p>
+        </div>
     </article>
 
 

@@ -24,7 +24,7 @@ const db = firebase.firestore();
 const productsRef = db.collection('products');
 
 const productsList = document.querySelector('.products');
-//const loader = document.querySelector('.loader');
+const loader = document.querySelector('.loader');
 
 let selectedItem = null;
 
@@ -47,7 +47,7 @@ function renderProducts(list) {
     //Delete
     const deleteBtn = newProduct.querySelector('.products__remove');
     deleteBtn.addEventListener('click', function () {
-      // loader.classList.add('loader--show');
+      loader.classList.add('loader--show');
       productsRef.doc(elem.id).delete().then(function () {
         console.log("Document successfully deleted!");
         getProducts();
@@ -88,7 +88,7 @@ function getProducts() {
       console.log(`${doc.id} => ${doc.data()}`);
     });
     renderProducts(objects);
-    //loader.classList.remove('loader--show');
+    loader.classList.remove('loader--show');
   });
 }
 
@@ -110,7 +110,7 @@ form.addEventListener('submit', function (event) {
     type: form.type.value,
   };
 
-  //loader.classList.add('loader--show');
+  loader.classList.add('loader--show');
 
   function handleThen(docRef) {
     getProducts();
@@ -118,9 +118,9 @@ form.addEventListener('submit', function (event) {
     form.imgUrl.value = '';
     form.price.value = '';
     form.descrip.value = '';
-    form.shape.value = '';
-    form.gender.value = '';
-    form.type.value = '';
+    form.shape.value = 'no';
+    form.gender.value = 'no';
+    form.type.value = 'no';
     selectedItem = null;
   }
 
