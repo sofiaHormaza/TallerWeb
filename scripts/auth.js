@@ -7,13 +7,11 @@ emailP = document.querySelector('.profile__email');
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         const loader = document.querySelector('.loader');
-        if (window.location.href.indexOf("profile") > -1){
-            loader.classList.add('loader--show');
-        }
         if (window.location.href.indexOf("index") > -1) {
             auth.href = './Html/profile.html';
         } else {
             auth.href = './profile.html';
+            loader.classList.add('loader--show');
         }
 
         if (userName) {
