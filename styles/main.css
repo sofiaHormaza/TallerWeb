@@ -1762,4 +1762,59 @@ input[type=button] {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
+
+.checkout {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkout__container {
+  width: 40%;
+}
+
+.checkout__titles {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+  padding: 70px 0px;
+}
+
+.checkout__titles h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.checkout__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.checkout__pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 70px;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+}
+
+.checkout__pay h4 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
 /*# sourceMappingURL=main.css.map */

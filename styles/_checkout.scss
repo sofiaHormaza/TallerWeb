@@ -1,0 +1,40 @@
+.checkout {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    
+    &__container {
+        width: 40%;
+    }
+
+    &__titles {
+        text-align: center;
+        font-family: $primary-font;
+        color: $font-color;
+        padding: 70px 0px;
+
+        h3 {
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
+
+    &__cont {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    &__pay {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 70px;
+        font-family: $primary-font;
+        color: $font-color;
+        
+        h4 {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+}
