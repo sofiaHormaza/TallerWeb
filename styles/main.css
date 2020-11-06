@@ -1428,6 +1428,18 @@ input[type=button] {
   margin-bottom: 20px;
 }
 
+@media (max-width: 600px) {
+  .form__info {
+    width: 85%;
+  }
+  .form h1 {
+    font-size: 25px;
+  }
+  .form p {
+    font-size: 15px;
+  }
+}
+
 .profile {
   width: 100%;
   font-family: "Montserrat", sans-serif;

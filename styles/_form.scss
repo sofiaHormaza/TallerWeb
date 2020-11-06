@@ -34,3 +34,19 @@
         margin-bottom: 20px;
     }
 }
+
+@media (max-width: 600px) {
+    .form {
+        &__info {
+            width: 85%;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
