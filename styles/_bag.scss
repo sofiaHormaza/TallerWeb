@@ -1,0 +1,71 @@
+.purchases {
+    display: flex;
+    justify-content: center;
+    background-color: $primary-color;
+
+    &__container {
+        width: 80%;
+        margin: 50px 0px;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $primary-font;
+        color: $font-color;
+        font-size: 18px;
+        padding: 10px 0px;
+        border-top: 1px solid #515a62;
+        border-bottom: 1px solid #515a62;
+    }
+
+    &__imageC {
+        width: 30%;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    &__remove {
+        text-decoration: underline;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    &__quanC {
+        width: 10%;
+        input {
+            margin-top: 5px;
+            width: 100%;
+            font-family: $primary-font;
+            color: $font-color;
+        }
+    }
+
+    &__resume {
+        width: 100%;
+        text-align: right;
+        margin-top: 50px;
+        font-family: $primary-font;
+        color: $font-color;
+        font-size: 18px;
+
+        p {
+            margin: 5px 0px 20px 0px;
+            font-size: 15px;
+        }
+
+        button {
+            align-self: flex-end;
+        }
+    }
+}

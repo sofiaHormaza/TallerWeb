@@ -1,18 +1,34 @@
-.products-banner {
+@mixin backImage($bg, $heig, $bp) {
+    background-image: $bg;
+    height: $heig;
+    background-position: $bp;
+}
+
+@mixin posTitle($pos) {
+    justify-content: $pos;
+}
+
+.simple-banner {
     display: flex;
     align-items: flex-end;
-    height: 50vh;
-    background-image: url("../images/sun-banner.jpg");
-    background-position: 50% 91%;
+    @include backImage(url("../images/sun-banner.jpg"), 50vh, 50% 91%);
     background-size: cover;
+
+    &--bag {
+        @include backImage(url("../images/check.jpg"), 35vh, 50% 50%);
+    }
     
-    h1 {
+    &__title {
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        @include posTitle(flex-end);
         color: white;
         font-family: $secondary-font;
         font-size: 60px;
         padding: 20px 40px;
+
+        &--bag {
+            @include posTitle(flex-start);
+        }
     }
 }

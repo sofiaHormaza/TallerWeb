@@ -1110,20 +1110,26 @@ input[type=button] {
   }
 }
 
-.products-banner {
+.simple-banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 50vh;
   background-image: url("../images/sun-banner.jpg");
+  height: 50vh;
   background-position: 50% 91%;
   background-size: cover;
 }
 
-.products-banner h1 {
+.simple-banner--bag {
+  background-image: url("../images/check.jpg");
+  height: 35vh;
+  background-position: 50% 50%;
+}
+
+.simple-banner__title {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1135,6 +1141,12 @@ input[type=button] {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 60px;
   padding: 20px 40px;
+}
+
+.simple-banner__title--bag {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .options-up {
@@ -1662,5 +1674,92 @@ input[type=button] {
 
 .details__text {
   margin-bottom: 50px;
+}
+
+.purchases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.purchases__container {
+  width: 80%;
+  margin: 50px 0px;
+}
+
+.purchases__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+  font-size: 18px;
+  padding: 10px 0px;
+  border-top: 1px solid #515a62;
+  border-bottom: 1px solid #515a62;
+}
+
+.purchases__imageC {
+  width: 30%;
+}
+
+.purchases__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
+}
+
+.purchases__info strong {
+  font-weight: 600;
+}
+
+.purchases__remove {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.purchases__quanC {
+  width: 10%;
+}
+
+.purchases__quanC input {
+  margin-top: 5px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+}
+
+.purchases__resume {
+  width: 100%;
+  text-align: right;
+  margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+  font-size: 18px;
+}
+
+.purchases__resume p {
+  margin: 5px 0px 20px 0px;
+  font-size: 15px;
+}
+
+.purchases__resume button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 /*# sourceMappingURL=main.css.map */

@@ -33,17 +33,34 @@
     </header>
 
 
-    <article class="login form">
-        <h1>LOGIN</h1>
-        <p>Please enter your email and password</p>
-        <form class="form__info login__info">
-            <input placeholder="Email" name="email" type="email" class="input">
-            <input placeholder="Password" name="password" type="password" class="input">
-            <button class="button button--secondary">LOGIN</button>
-        </form>
-        <p>Don’t have an account?
-            <a href="../Html/register.html"  class="form__link">Create one</a>
-        </p>
+    <section class="simple-banner simple-banner--bag">
+        <h1 class="simple-banner__title simple-banner__title--bag">SHOPPING BAG</h1>
+    </section>
+
+
+    <article class="purchases">
+        <div class="purchases__container">
+            <section class="purchases__item">
+                <div class="purchases__imageC">
+                    <img src="../images/sun1.webp" alt="" class="purchases__image">
+                </div>
+                <div class="purchases__info">
+                    <p class="purchases__name">PO3108S</p>
+                    <p class="purchases__price"><strong>Price:</strong> $342.00</p>
+                    <div class="purchases__quanC">
+                        <p>Quantity</p>
+                        <input type="number" name="quantity" value="1">
+                    </div>
+                    <p class="purchases__remove">Remove</p>
+                </div>
+            </section>
+
+            <section class="purchases__resume">
+                <h4 class="purchases__total"><strong>Total:</strong> 1,032</h4>
+                <p>Free shipping</p>
+                <button class="button button--secondary">CHECKOUT</button>
+            </section>
+        </div>
     </article>
 
 
@@ -79,12 +96,12 @@
         </div>
     </footer>
 
-
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
     <script src="../scripts/firebaseConfig.js"></script>
-    <script src="../scripts/login.js"></script>
+    <script src="../scripts/auth.js"></script>
+
 </body>
 
 </html>

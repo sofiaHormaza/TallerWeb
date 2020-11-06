@@ -1,4 +1,5 @@
 const auth = document.querySelector('.header__user');
+const bag = document.querySelector ('.header__shop');
 const authSignout = document.querySelector('.profile__container button');
 userName = document.querySelector('.profile__usernameB');
 userName2 = document.querySelector('.profile__username');
