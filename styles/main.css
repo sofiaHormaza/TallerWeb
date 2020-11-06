@@ -1287,14 +1287,14 @@ input[type=button] {
 
 .edit-add--show {
   display: block;
-  width: 55%;
+  width: 70%;
   margin: 0 auto;
   position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  padding: 5% 10%;
+  padding: 5% 5%;
   background-color: white;
   z-index: 4;
 }
@@ -1323,10 +1323,42 @@ input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-add__selections {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.edit-add__info {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.edit-add p {
+  color: #515a62;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .input {
@@ -1337,6 +1369,38 @@ input[type=button] {
   color: #5c646b;
   border: 1px solid #515a62;
   margin-bottom: 20px;
+}
+
+.input--file {
+  color: #515a62;
+  font-family: "Montserrat", sans-serif;
+}
+
+.input--file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.input--file::before {
+  content: "Upload image";
+  color: #515a62;
+  display: inline-block;
+  background: white;
+  border: 1px solid #515a62;
+  padding: 10px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+.input--file:hover::before {
+  border-color: black;
+}
+
+.input--file:active {
+  outline: 0;
 }
 
 .input::-webkit-input-placeholder {

@@ -86,7 +86,7 @@
                     Square
                 </label>
             </div>
-            
+
         </side>
 
 
@@ -108,35 +108,48 @@
         <img src="../images/close.png" alt="" class="edit-add__close">
         <form class="edit-add__form">
 
-            <input placeholder="Product name" name="nameProduct" type="text" class="input">
-            <input placeholder="Price" name="price" type="number" step="any" class="input">
-            <textarea placeholder="Description" name="descrip" cols="30" rows="5" class="input"></textarea>
-            <input placeholder="Image url" name="imgUrl" type="url" class="input">
-
-            <select name="shape" class="select">
-                <option value="no" selected="selected" disabled="disabled">Frame shape</option>
-                <option value="round">Round</option>
-                <option value="rectangle">Rectangle</option>
-                <option value="pilot">Pilot/ Aviator</option>
-                <option value="square">Square</option>
-            </select>
-
-            <div class="edit-add__two">
-                <select name="gender" class="select">
-                    <option value="no" selected="selected" disabled="disabled">Gender</option>
-                    <option value="men">Men</option>
-                    <option value="women">Women</option>
+            <div class="edit-add__selections">
+                <p>Product categories</p>
+                <select name="shape" class="select">
+                    <option value="no" selected="selected" disabled="disabled">Frame shape</option>
+                    <option value="round">Round</option>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="pilot">Pilot/ Aviator</option>
+                    <option value="square">Square</option>
                 </select>
 
-                <select name="type" class="select">
-                    <option value="no" selected="selected" disabled="disabled">Type</option>
-                    <option value="sun">Sunglasses</option>
-                    <option value="optical">Optical</option>
-                </select>
+                <div class="edit-add__two">
+                    <select name="gender" class="select">
+                        <option value="no" selected="selected" disabled="disabled">Gender</option>
+                        <option value="men">Men</option>
+                        <option value="women">Women</option>
+                    </select>
+
+                    <select name="type" class="select">
+                        <option value="no" selected="selected" disabled="disabled">Type</option>
+                        <option value="sun">Sunglasses</option>
+                        <option value="optical">Optical</option>
+                    </select>
+                </div>
+
+                <p>Upload product images</p>
+                <input placeholder="Image url" name="imgUrl" type="file" class="input--file">
+                <input placeholder="Image url" name="imgUrl" type="file" class="input--file">
+                <input placeholder="Image url" name="imgUrl" type="file" class="input--file">
             </div>
-            <button class="button button--secondary">
-                Confirm
-            </button>
+
+
+            <div class="edit-add__info">
+                <p>Product information</p>
+                <input placeholder="Product name" name="nameProduct" type="text" class="input">
+                <input placeholder="Price" name="price" type="number" step="any" class="input">
+                <textarea placeholder="Description" name="descrip" cols="30" rows="5" class="input"></textarea>
+
+                <button class="button button--secondary">
+                    Confirm
+                </button>
+            </div>
+
         </form>
     </article>
 
@@ -182,7 +195,7 @@
     </footer>
 
     <div class="opacity"></div>
-    
+
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>

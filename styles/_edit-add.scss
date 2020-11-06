@@ -3,13 +3,13 @@
 
     &--show {
         display: block;
-        width: 55%;
+        width: 70%;
         margin: 0 auto;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 5% 10%;
+        padding: 5% 5%;
         background-color: white;
         z-index: 4;
     }
@@ -32,7 +32,27 @@
 
     &__form {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__selections {
+        width: 45%;
+        display: flex;
         flex-direction: column;
+    }
+
+    &__info {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        color: $font-color;
+        font-family: $primary-font;
+        font-weight: 500;
+        margin-bottom: 20px;
     }
 
 }

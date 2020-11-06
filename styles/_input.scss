@@ -7,10 +7,42 @@
     border: 1px solid #515a62;
     margin-bottom: 20px;
 
+    &--file {
+        color: $font-color;
+        font-family: $primary-font;
+        &::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        &::before {
+            content: "Upload image";
+            color: $font-color;
+            display: inline-block;
+            background: white;
+            border: 1px solid #515a62;
+            padding: 10px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            font-family: $primary-font;
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            &::before {
+                border-color: black;
+            }
+          }
+    
+        &:active {
+            outline: 0;
+          }
+    }
+
     &::placeholder {
         font-family: $primary-font;
         font-weight: 400;
         padding-left: 10px;
     }
-
 }
