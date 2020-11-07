@@ -17,8 +17,6 @@ function closeHandle() {
 close.addEventListener('click', closeHandle);
 
 
-
-
 //Database
 const db = firebase.firestore();
 const productsRef = db.collection('products');
@@ -27,6 +25,8 @@ const productsList = document.querySelector('.products');
 const loader = document.querySelector('.loader');
 
 let selectedItem = null;
+
+var storageRef = firebase.storage().ref();
 
 function renderProducts(list) {
   productsList.innerHTML = '';
@@ -37,12 +37,26 @@ function renderProducts(list) {
     newProduct.innerHTML = `
       <p class="products__remove">Remove</p>
       <div class="products__container">
-        <img class="products__imgGlasses" src="${elem.imgUrl}" alt="" >
+        <img class="products__imgGlasses" src="${elem.img}" alt="" >
         <h4 class="products__title">${elem.nameProduct}</h4>
         <p class="products__price">$${elem.price}</p>
         <button class="button button--secondary product__edit">EDIT</button>
       </div>
       `;
+
+
+    if (elem.storageImgs) {
+      
+        storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
+          var img = newProduct.querySelector('img');
+          img.src = url;
+        }).catch(function (error) {
+          // Handle any errors
+        });
+      
+    }
+
+
 
     //Delete
     const deleteBtn = newProduct.querySelector('.products__remove');
@@ -61,7 +75,6 @@ function renderProducts(list) {
     const editBtn = newProduct.querySelector('.product__edit');
     editBtn.addEventListener('click', function () {
       form.nameProduct.value = elem.nameProduct;
-      form.imgUrl.value = elem.imgUrl;
       form.price.value = elem.price;
       form.descrip.value = elem.descrip;
       form.shape.value = elem.shape;
@@ -94,6 +107,7 @@ function getProducts() {
 
 getProducts();
 
+var imagePaths = [];
 
 //Agregar producto
 const form = document.querySelector('.edit-add__form');
@@ -102,12 +116,13 @@ form.addEventListener('submit', function (event) {
 
   const newProduct = {
     nameProduct: form.nameProduct.value,
-    price: form.price.value,
+    price: Number(form.price.value),
     descrip: form.descrip.value,
-    imgUrl: form.imgUrl.value,
     shape: form.shape.value,
     gender: form.gender.value,
     type: form.type.value,
+    storageImgs: imagePaths,
+    date: Date.now(),
   };
 
   loader.classList.add('loader--show');
@@ -115,7 +130,6 @@ form.addEventListener('submit', function (event) {
   function handleThen(docRef) {
     getProducts();
     form.nameProduct.value = '';
-    form.imgUrl.value = '';
     form.price.value = '';
     form.descrip.value = '';
     form.shape.value = 'no';
@@ -130,15 +144,28 @@ form.addEventListener('submit', function (event) {
 
   if (selectedItem) {
     //Edit
-    productsRef
-      .doc(selectedItem.id).set(newProduct).then(handleThen).catch(handleCatch);
+    productsRef.doc(selectedItem.id).set(newProduct).then(handleThen).catch(handleCatch);
 
   } else {
     //Add product
-    productsRef
-      .add(newProduct).then(handleThen).catch(handleCatch);
+    productsRef.add(newProduct).then(handleThen).catch(handleCatch);
   }
+});
 
+const imagesP = form.querySelectorAll('.input--file');
+imagesP.forEach(function(group, index) {
+  group.addEventListener('change', function () {
+  
+    var newImageRef = storageRef.child(`products/${Math.floor(Math.random()*999999999)}.webp`);
+  
+    var file = group.files[0]; // use the Blob or File API
+  
+    newImageRef.put(file).then(function(snapshot) {
+      console.log(snapshot)
+      console.log('Uploaded a blob or file!');
+      imagePaths[index] = snapshot.metadata.fullPath;
+    });
+  });
 });
 
 
