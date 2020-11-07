@@ -29,11 +29,9 @@ firebase.auth().onAuthStateChanged(function (user) {
                     const showAdmin = document.querySelectorAll('.showAdmin');
                     const hideAdmin = document.querySelectorAll('.hideAdmin');
                     showAdmin.forEach(function (elem) {
-                        console.log('hola');
                         elem.classList.remove('hidden');
                     })
                     hideAdmin.forEach(function (elem) {
-                        console.log('hola');
                         elem.classList.add('hidden');
                     })
                 }

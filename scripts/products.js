@@ -34,10 +34,12 @@ function renderProducts(list) {
     const newProduct = document.createElement('div');
     newProduct.classList.add('products__glasses');
 
+    const url = `details.html?${elem.id}-${elem.nameProduct}`;
+
     newProduct.innerHTML = `
       <p class="products__remove hidden showAdmin">Remove</p>
       <div class="products__container">
-        <a href="" class="products__link">
+        <a href="${url}" class="products__link">
           <img class="products__imgGlasses" src="${elem.img}" alt="" >
         </a>
         <h4 class="products__title">${elem.nameProduct}</h4>
@@ -57,8 +59,6 @@ function renderProducts(list) {
         });
       
     }
-
-
 
     //Delete
     const deleteBtn = newProduct.querySelector('.products__remove');
@@ -88,6 +88,7 @@ function renderProducts(list) {
       openHandle();
     });
 
+    //Mostrar opciones del admin
     if(userInfo && userInfo.admin) {
       deleteBtn.classList.remove('hidden');
       editBtn.classList.remove('hidden');
@@ -178,5 +179,3 @@ imagesP.forEach(function(group, index) {
     });
   });
 });
-
-
