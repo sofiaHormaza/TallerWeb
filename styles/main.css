@@ -1281,6 +1281,10 @@ input[type=button] {
   color: #515a62;
 }
 
+.hidden {
+  display: none;
+}
+
 .edit-add {
   display: none;
 }

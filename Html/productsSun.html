@@ -16,7 +16,7 @@
                 <img src="../images/logo.png" alt="logo" class="header__logo">
             </a>
             <section class="header__categories">
-                <a href="../Html/adminProductsSun.html" class="header__item">SUN</a>
+                <a href="../Html/productsSun.html" class="header__item">SUN</a>
                 <a href="#" class="header__item">OPTICAL</a>
                 <a href="#" class="header__item">ABOUT US</a>
             </section>
@@ -41,7 +41,7 @@
     <section class="options-up">
         <h4>Filter by</h4>
         <div class="options-up__actions">
-            <button class="button button--secondary">ADD PRODUCT</button>
+            <button class="button button--secondary hidden showAdmin">ADD PRODUCT</button>
             <select name="select-order" class="options-up__order">
                 <option selected="selected" disabled="disabled">Sort by</option>
                 <option value="low">Price: Low to High</option>
@@ -94,7 +94,9 @@
             <!--<div class="products__glasses">
                 <p class="products__remove">Remove</p>
                 <div class="products__container">
-                    <img src="../images/sun1.webp" alt="" class="products__imgGlasses">
+                    <a href="" class="products__link">
+                        <img src="../images/sun1.webp" alt="" class="products__imgGlasses">
+                    </a>
                     <h4 class="products__title">PO3194S</h4>
                     <p class="products__price">$345.00</p>
                     <button class="button button--secondary">EDIT</button>
@@ -201,7 +203,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
     <script src="../scripts/firebaseConfig.js"></script>
-    <script src="../scripts/admin.js"></script>
+    <script src="../scripts/products.js"></script>
     <script src="../scripts/auth.js"></script>
 </body>
 

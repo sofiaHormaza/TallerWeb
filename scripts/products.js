@@ -35,18 +35,20 @@ function renderProducts(list) {
     newProduct.classList.add('products__glasses');
 
     newProduct.innerHTML = `
-      <p class="products__remove">Remove</p>
+      <p class="products__remove hidden showAdmin">Remove</p>
       <div class="products__container">
-        <img class="products__imgGlasses" src="${elem.img}" alt="" >
+        <a href="" class="products__link">
+          <img class="products__imgGlasses" src="${elem.img}" alt="" >
+        </a>
         <h4 class="products__title">${elem.nameProduct}</h4>
         <p class="products__price">$${elem.price}</p>
-        <button class="button button--secondary product__edit">EDIT</button>
+        <button class="button button--secondary product__edit hidden showAdmin">EDIT</button>
+        <button class="button button--secondary product__addShop hideAdmin">ADD TO BAG</button>
       </div>
       `;
 
-
-    if (elem.storageImgs) {
-      
+    //Mostrar imagen
+    if (elem.storageImgs && elem.storageImgs.length >0) {
         storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
           var img = newProduct.querySelector('img');
           img.src = url;
@@ -73,6 +75,7 @@ function renderProducts(list) {
 
     //Edit
     const editBtn = newProduct.querySelector('.product__edit');
+    const shopBtn = newProduct.querySelector ('.product__addShop');
     editBtn.addEventListener('click', function () {
       form.nameProduct.value = elem.nameProduct;
       form.price.value = elem.price;
@@ -85,12 +88,18 @@ function renderProducts(list) {
       openHandle();
     });
 
+    if(userInfo && userInfo.admin) {
+      deleteBtn.classList.remove('hidden');
+      editBtn.classList.remove('hidden');
+      shopBtn.classList.add('hidden');
+    }
+
 
     productsList.appendChild(newProduct);
   });
 }
 
-
+//Mostrar productos snapshot
 function getProducts() {
   productsRef.get().then((querySnapshot) => {
     const objects = [];
@@ -152,6 +161,8 @@ form.addEventListener('submit', function (event) {
   }
 });
 
+
+//Imagenes Storage
 const imagesP = form.querySelectorAll('.input--file');
 imagesP.forEach(function(group, index) {
   group.addEventListener('change', function () {
