@@ -112,6 +112,7 @@ function getProducts() {
     });
     renderProducts(objects);
     sortProducts();
+    filterProducts();
     loader.classList.remove('loader--show');
   });
 }
@@ -190,51 +191,76 @@ function sortProducts() {
   var sortValue;
 
   sort.addEventListener('input', function (event) {
-      sortValue = sort.value;
+    sortValue = sort.value;
+    var orderNow;
 
-      switch (sortValue) {
-  
-        case 'low':
-          productsRef.orderBy('price').get().then((querySnapshot) => {
-            const objects = [];
-            querySnapshot.forEach((doc) => {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              console.log(`${doc.id} => ${doc.data()}`);
-            });
-            renderProducts(objects);
-            loader.classList.remove('loader--show');
-          });
-          break;
+    switch (sortValue) {
 
-          case 'high':
-          productsRef.orderBy('price', 'desc').get().then((querySnapshot) => {
-            const objects = [];
-            querySnapshot.forEach((doc) => {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              console.log(`${doc.id} => ${doc.data()}`);
-            });
-            renderProducts(objects);
-            loader.classList.remove('loader--show');
-          });
-          break;
+      case 'low':
+        orderNow = productsRef.orderBy('price')
+        break;
 
-          case 'newest':
-          productsRef.orderBy('date', 'desc').get().then((querySnapshot) => {
-            const objects = [];
-            querySnapshot.forEach((doc) => {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              console.log(`${doc.id} => ${doc.data()}`);
-            });
-            renderProducts(objects);
-            loader.classList.remove('loader--show');
+      case 'high':
+        orderNow = productsRef.orderBy('price', 'desc')
+        break;
+
+      case 'newest':
+        orderNow = productsRef.orderBy('date', 'desc')
+        break;
+    }
+
+    orderNow.get().then((querySnapshot) => {
+      const objects = [];
+      querySnapshot.forEach((doc) => {
+        const obj = doc.data();
+        obj.id = doc.id;
+        objects.push(obj);
+        console.log(`${doc.id} => ${doc.data()}`);
+      });
+      renderProducts(objects);
+    });
+  });
+}
+
+const filters = document.querySelectorAll('.filters__checkbox');
+
+function filterProducts() {
+  filters.forEach(function (ch) {
+    ch.addEventListener('change', function () {
+      if (ch.checked) {
+        var filterNow;
+        switch (ch.name) {
+          case 'men':
+            filterNow = productsRef.where('gender', "==", "men");
+        break;
+          case 'women':
+            filterNow = productsRef.where('gender', "==", "women");
+            break;
+        }
+
+        filterNow.get().then((querySnapshot) => {
+          const objects = [];
+          querySnapshot.forEach((doc) => {
+            const obj = doc.data();
+            obj.id = doc.id;
+            objects.push(obj);
+            console.log(`${doc.id} => ${doc.data()}`);
           });
-          break;
+          renderProducts(objects);
+        });
+
+      } else {
+        productsRef.get().then((querySnapshot) => {
+          const objects = [];
+          querySnapshot.forEach((doc) => {
+            const obj = doc.data();
+            obj.id = doc.id;
+            objects.push(obj);
+            console.log(`${doc.id} => ${doc.data()}`);
+          });
+          renderProducts(objects);
+        });
       }
+    });
   });
 }
