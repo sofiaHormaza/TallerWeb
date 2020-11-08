@@ -50,14 +50,14 @@ function renderProducts(list) {
       `;
 
     //Mostrar imagen
-    if (elem.storageImgs && elem.storageImgs.length >0) {
-        storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
-          var img = newProduct.querySelector('img');
-          img.src = url;
-        }).catch(function (error) {
-          // Handle any errors
-        });
-      
+    if (elem.storageImgs && elem.storageImgs.length > 0) {
+      storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
+        var img = newProduct.querySelector('img');
+        img.src = url;
+      }).catch(function (error) {
+        // Handle any errors
+      });
+
     }
 
     //Delete
@@ -75,7 +75,7 @@ function renderProducts(list) {
 
     //Edit
     const editBtn = newProduct.querySelector('.product__edit');
-    const shopBtn = newProduct.querySelector ('.product__addShop');
+    const shopBtn = newProduct.querySelector('.product__addShop');
     editBtn.addEventListener('click', function () {
       form.nameProduct.value = elem.nameProduct;
       form.price.value = elem.price;
@@ -89,7 +89,7 @@ function renderProducts(list) {
     });
 
     //Mostrar opciones del admin
-    if(userInfo && userInfo.admin) {
+    if (userInfo && userInfo.admin) {
       deleteBtn.classList.remove('hidden');
       editBtn.classList.remove('hidden');
       shopBtn.classList.add('hidden');
@@ -111,6 +111,7 @@ function getProducts() {
       console.log(`${doc.id} => ${doc.data()}`);
     });
     renderProducts(objects);
+    sortProducts();
     loader.classList.remove('loader--show');
   });
 }
@@ -165,17 +166,75 @@ form.addEventListener('submit', function (event) {
 
 //Imagenes Storage
 const imagesP = form.querySelectorAll('.input--file');
-imagesP.forEach(function(group, index) {
+imagesP.forEach(function (group, index) {
   group.addEventListener('change', function () {
-  
-    var newImageRef = storageRef.child(`products/${Math.floor(Math.random()*999999999)}.webp`);
-  
+
+    var newImageRef = storageRef.child(`products/${Math.floor(Math.random() * 999999999)}.webp`);
+
     var file = group.files[0]; // use the Blob or File API
-  
-    newImageRef.put(file).then(function(snapshot) {
+
+    newImageRef.put(file).then(function (snapshot) {
       console.log(snapshot)
       console.log('Uploaded a blob or file!');
       imagePaths[index] = snapshot.metadata.fullPath;
     });
   });
 });
+
+
+//Ordenar productos
+
+const sort = document.querySelector('.options-up__order');
+
+function sortProducts() {
+  var sortValue;
+
+  sort.addEventListener('input', function (event) {
+      sortValue = sort.value;
+
+      switch (sortValue) {
+  
+        case 'low':
+          productsRef.orderBy('price').get().then((querySnapshot) => {
+            const objects = [];
+            querySnapshot.forEach((doc) => {
+              const obj = doc.data();
+              obj.id = doc.id;
+              objects.push(obj);
+              console.log(`${doc.id} => ${doc.data()}`);
+            });
+            renderProducts(objects);
+            loader.classList.remove('loader--show');
+          });
+          break;
+
+          case 'high':
+          productsRef.orderBy('price', 'desc').get().then((querySnapshot) => {
+            const objects = [];
+            querySnapshot.forEach((doc) => {
+              const obj = doc.data();
+              obj.id = doc.id;
+              objects.push(obj);
+              console.log(`${doc.id} => ${doc.data()}`);
+            });
+            renderProducts(objects);
+            loader.classList.remove('loader--show');
+          });
+          break;
+
+          case 'newest':
+          productsRef.orderBy('date', 'desc').get().then((querySnapshot) => {
+            const objects = [];
+            querySnapshot.forEach((doc) => {
+              const obj = doc.data();
+              obj.id = doc.id;
+              objects.push(obj);
+              console.log(`${doc.id} => ${doc.data()}`);
+            });
+            renderProducts(objects);
+            loader.classList.remove('loader--show');
+          });
+          break;
+      }
+  });
+}
