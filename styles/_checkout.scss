@@ -38,3 +38,25 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .checkout {
+        &__container {
+            width: 80%;
+        }
+
+        &__titles {
+            padding: 50px 0px;
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+        &__pay {
+            h4 {
+                font-size: 15px;
+            }
+        }
+    }
+}

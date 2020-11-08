@@ -39,3 +39,26 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .simple-banner {
+        @include backImage(url("../images/sun-banner.jpg"), 40vh, 50% 91%);
+        align-items: flex-start;
+
+        &--optical {
+            align-items: flex-start;
+            @include backImage(url("../images/opt-banner.jpg"), 40vh, 40% 2%);
+        }
+
+        &--bag {
+            display: flex;
+            align-items: flex-end;
+            @include backImage(url("../images/check.jpg"), 30vh, 50% 50%);
+        }
+
+        &__title {
+            font-size: 30px;
+            padding: 20px 20px;
+        }
+    }
+}

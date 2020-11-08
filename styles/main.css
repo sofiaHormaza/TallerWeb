@@ -1173,6 +1173,40 @@ input[type=button] {
           justify-content: flex-start;
 }
 
+@media (max-width: 600px) {
+  .simple-banner {
+    background-image: url("../images/sun-banner.jpg");
+    height: 40vh;
+    background-position: 50% 91%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .simple-banner--optical {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-image: url("../images/opt-banner.jpg");
+    height: 40vh;
+    background-position: 40% 2%;
+  }
+  .simple-banner--bag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-image: url("../images/check.jpg");
+    height: 30vh;
+    background-position: 50% 50%;
+  }
+  .simple-banner__title {
+    font-size: 30px;
+    padding: 20px 20px;
+  }
+}
+
 .options-up {
   width: 95%;
   display: -webkit-box;
@@ -1618,6 +1652,46 @@ input[type=button] {
   margin: 40px;
 }
 
+@media (max-width: 600px) {
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile__account {
+    width: 100%;
+  }
+  .profile__hello {
+    text-align: center;
+    font-size: 30px;
+    padding: 30px 0px;
+    height: 20vh;
+  }
+  .profile__orders {
+    width: 100%;
+  }
+  .profile__orders h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .profile__info {
+    padding: 10px 60px 20px 20px;
+    margin-bottom: 20px;
+  }
+  .profile__info h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .profile__info h5 {
+    font-size: 12px;
+  }
+  .profile__info p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+
 .loader {
   display: none;
 }
@@ -1758,9 +1832,6 @@ input[type=button] {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 30%;
-}
-
-.details__description {
   font-family: "Montserrat", sans-serif;
   color: #515a62;
 }
@@ -1778,6 +1849,52 @@ input[type=button] {
 
 .details__text {
   margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+  .details__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .details__photos {
+    margin-top: 35px;
+    width: 90%;
+    height: 60vh;
+  }
+  .details__description {
+    width: 70%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .details__action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+  .details__title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .details__price {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .details__text {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
 }
 
 .purchases {
@@ -1867,6 +1984,27 @@ input[type=button] {
       align-self: flex-end;
 }
 
+@media (max-width: 600px) {
+  .purchases__imageC {
+    width: 65%;
+  }
+  .purchases__info {
+    width: 35%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 12px;
+  }
+  .purchases__info p {
+    margin-bottom: 5px;
+  }
+  .purchases__quanC {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+}
+
 .checkout {
   background-color: #f2f2f2;
   display: -webkit-box;
@@ -1920,5 +2058,20 @@ input[type=button] {
 .checkout__pay h4 {
   font-size: 20px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .checkout__container {
+    width: 80%;
+  }
+  .checkout__titles {
+    padding: 50px 0px;
+  }
+  .checkout__titles h3 {
+    font-size: 20px;
+  }
+  .checkout__pay h4 {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
