@@ -29,10 +29,15 @@
             height: 28%;
             font-family: $primary-font;
             color: white;
-            margin-left: 70px;
             margin-top: 20px;
-            line-height: 200%;
-            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            img {
+                align-self: center;
+                margin-bottom: 20px;
+            }
         }
 
         &__profile {

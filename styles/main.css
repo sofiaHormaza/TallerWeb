@@ -452,10 +452,21 @@ input[type=button] {
     height: 28%;
     font-family: "Montserrat", sans-serif;
     color: white;
-    margin-left: 70px;
     margin-top: 20px;
-    line-height: 200%;
-    font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .burger-menu__user img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 20px;
   }
   .burger-menu__profile {
     color: white;
@@ -1120,6 +1131,19 @@ input[type=button] {
   background-image: url("../images/sun-banner.jpg");
   height: 50vh;
   background-position: 50% 91%;
+  background-size: cover;
+}
+
+.simple-banner--optical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-image: url("../images/opt-banner.jpg");
+  height: 50vh;
+  background-position: 40% 24%;
   background-size: cover;
 }
 

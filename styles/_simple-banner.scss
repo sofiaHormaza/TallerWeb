@@ -14,10 +14,17 @@
     @include backImage(url("../images/sun-banner.jpg"), 50vh, 50% 91%);
     background-size: cover;
 
+    &--optical {
+        display: flex;
+        align-items: flex-end;
+        @include backImage(url("../images/opt-banner.jpg"), 50vh, 40% 24%);
+        background-size: cover;
+    }
+
     &--bag {
         @include backImage(url("../images/check.jpg"), 35vh, 50% 50%);
     }
-    
+
     &__title {
         width: 100%;
         display: flex;

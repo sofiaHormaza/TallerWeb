@@ -1,6 +1,7 @@
 const auth = document.querySelector('.header__user');
 const bag = document.querySelector('.header__shop');
 const authSignout = document.querySelector('.profile__container button');
+const authBurger = document.querySelector('.burger-menu__profile');
 userName = document.querySelector('.profile__usernameB');
 userName2 = document.querySelector('.profile__username');
 emailP = document.querySelector('.profile__email');
@@ -12,8 +13,10 @@ firebase.auth().onAuthStateChanged(function (user) {
         const loader = document.querySelector('.loader');
         if (window.location.href.indexOf("index") > -1) {
             auth.href = './Html/profile.html';
+            authBurger.href = './Html/profile.html';
         } else {
             auth.href = './profile.html';
+            authBurger.href = './profile.html';
             loader.classList.add('loader--show');
         }
 
@@ -49,8 +52,10 @@ firebase.auth().onAuthStateChanged(function (user) {
     } else {
         if (window.location.href.indexOf("index") > -1) {
             auth.href = './Html/login.html';
+            authBurger.href = './Html/login.html';
         } else {
             auth.href = './login.html';
+            authBurger.href = './login.html';
         }
     }
 });
