@@ -1,7 +1,7 @@
 //Show modal to edit or add a product
 const modal = document.querySelector('.edit-add');
 const closeM = document.querySelector('.edit-add__close');
-const btnAdd = document.querySelector('.options-up__actions button');
+const btnAdd = document.querySelector('.filters button');
 
 function openHandle() {
   modal.classList.add('edit-add--show');
@@ -39,7 +39,7 @@ function renderProducts(list) {
       <p class="products__remove hidden showAdmin">Remove</p>
       <div class="products__container">
         <a href="${url}" class="products__link">
-          <img class="products__imgGlasses" src="${elem.img}" alt="" >
+          <img class="products__imgGlasses" src="" alt="" >
         </a>
         <h4 class="products__title">${elem.nameProduct}</h4>
         <p class="products__price">$${elem.price}</p>
@@ -84,7 +84,8 @@ function renderProducts(list) {
       form.type.value = elem.type;
       selectedItem = elem;
 
-      openHandle();
+      modal.classList.add('edit-add--show');
+      opacity.classList.add('opacity--show');
     });
 
     //Mostrar opciones del admin
@@ -94,24 +95,22 @@ function renderProducts(list) {
       shopBtn.classList.add('hidden');
     }
 
-
     productsList.appendChild(newProduct);
   });
 }
 
-//Mostrar productos snapshot
+let objectsList = [];
+
 function getProducts() {
   productsRef.get().then((querySnapshot) => {
-    const objects = [];
+    objectsList = [];
     querySnapshot.forEach((doc) => {
       const obj = doc.data();
       obj.id = doc.id;
-      objects.push(obj);
+      objectsList.push(obj);
       console.log(`${doc.id} => ${doc.data()}`);
     });
-    renderProducts(objects);
-    sortProducts();
-    filterProducts();
+    renderProducts(objectsList);
     loader.classList.remove('loader--show');
   });
 }
@@ -184,42 +183,39 @@ imagesP.forEach(function (group, index) {
 
 //Ordenar productos
 
-const sort = document.querySelector('.options-up__order');
+const sort = document.querySelector('.filters__order');
 
-function sortProducts() {
-  var sortValue;
+var sortValue;
 
-  sort.addEventListener('input', function (event) {
-    sortValue = sort.value;
-    var orderNow;
+sort.addEventListener('input', function () {
+  sortValue = sort.value;
+  let copy = objectsList.slice();
 
-    switch (sortValue) {
+  switch (sortValue) {
 
-      case 'low':
-        orderNow = productsRef.orderBy('price')
-        break;
-
-      case 'high':
-        orderNow = productsRef.orderBy('price', 'desc')
-        break;
-
-      case 'newest':
-        orderNow = productsRef.orderBy('date', 'desc')
-        break;
-    }
-
-    orderNow.get().then((querySnapshot) => {
-      const objects = [];
-      querySnapshot.forEach((doc) => {
-        const obj = doc.data();
-        obj.id = doc.id;
-        objects.push(obj);
-        console.log(`${doc.id} => ${doc.data()}`);
+    case 'low':
+      copy.sort(function (a, b) {
+        return a.price - b.price;
       });
-      renderProducts(objects);
-    });
-  });
-}
+      break;
+
+    case 'high':
+      copy.sort(function (a, b) {
+        return b.price - a.price;
+      });
+      break;
+
+    case 'newest':
+      copy.sort(function (a, b) {
+        return b.date - a.date;
+      });
+      break;
+  }
+
+  renderProducts(copy);
+});
+
+
 
 const filters = document.querySelectorAll('.filters__checkbox');
 
@@ -231,7 +227,7 @@ function filterProducts() {
         switch (ch.name) {
           case 'men':
             filterNow = productsRef.where('gender', "==", "men");
-        break;
+            break;
           case 'women':
             filterNow = productsRef.where('gender', "==", "women");
             break;

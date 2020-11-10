@@ -11,12 +11,12 @@ var userInfo;
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         const loader = document.querySelector('.loader');
-        if (window.location.href.indexOf("index") > -1) {
-            auth.href = './Html/profile.html';
-            authBurger.href = './Html/profile.html';
-        } else {
+        if (window.location.href.indexOf("Html") > -1) {
             auth.href = './profile.html';
             authBurger.href = './profile.html';
+        } else {
+            auth.href = './Html/profile.html';
+            authBurger.href = './Html/profile.html';
             loader.classList.add('loader--show');
         }
 
@@ -50,12 +50,12 @@ firebase.auth().onAuthStateChanged(function (user) {
         });
 
     } else {
-        if (window.location.href.indexOf("index") > -1) {
-            auth.href = './Html/login.html';
-            authBurger.href = './Html/login.html';
-        } else {
+        if (window.location.href.indexOf("Html") > -1) {
             auth.href = './login.html';
             authBurger.href = './login.html';
+        } else {
+            auth.href = './Html/login.html';
+            authBurger.href = './Html/login.html';
         }
     }
 });

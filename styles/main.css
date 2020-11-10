@@ -1207,39 +1207,6 @@ input[type=button] {
   }
 }
 
-.options-up {
-  width: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto;
-  padding: 30px 0px;
-}
-
-.options-up h4 {
-  width: 20%;
-  font-family: "Montserrat", sans-serif;
-  color: #515a62;
-  font-weight: 500;
-  border-bottom: 1px solid #515a62;
-  padding-top: 10px;
-}
-
-.options-up__order {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  font-family: "Montserrat", sans-serif;
-  padding: 11px 54px 11px 10px;
-  margin-left: 20px;
-  background: url("../images/down.png") no-repeat;
-  background-size: 7%;
-  background-position: 95% 50%;
-}
-
 .filters {
   width: 20%;
 }
@@ -1254,19 +1221,46 @@ input[type=button] {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 40px;
+  margin-top: 40px;
   margin-left: 20px;
   color: #515a62;
+}
+
+.filters__order {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 11px 54px 11px 10px;
+  background: url("../images/down.png") no-repeat;
+  background-size: 7%;
+  background-position: 95% 50%;
+  margin-bottom: 20px;
 }
 
 .filters p {
   margin-bottom: 20px;
 }
 
+.filters h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+  font-weight: 500;
+  border-bottom: 1px solid #515a62;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .filters__label {
   margin-bottom: 10px;
   padding-right: 100px;
   vertical-align: middle;
+}
+
+.filters button {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .containerP {

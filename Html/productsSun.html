@@ -38,55 +38,53 @@
     </section>
 
 
-    <section class="options-up">
-        <h4>Filter by</h4>
-        <div class="options-up__actions">
-            <button class="button button--secondary hidden showAdmin">ADD PRODUCT</button>
-            <select name="select-order" class="options-up__order">
-                <option selected="selected">Sort by</option>
-                <option value="low">Price: Low to High</option>
-                <option value="high">Price: High to Low</option>
-                <option value="newest">Newest</option>
-            </select>
-        </div>
-    </section>
-
     <div class="containerP">
 
         <side class="filters">
+            <button class="button button--secondary hidden showAdmin">ADD PRODUCT</button>
+            <form class="filters__form">
 
-            <div class="filters__group">
-                <p>Gender</p>
-                <label class="filters__label">
-                    <input type="checkbox" name="men" class="filters__checkbox">
-                    Men
-                </label>
-                <label class="filters__label">
-                    <input type="checkbox" name="women" class="filters__checkbox">
-                    Women
-                </label>
-            </div>
+                <select name="select-order" class="filters__order">
+                    <option selected="selected">Sort by</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                </select>
 
-            <div class="filters__group">
-                <p>Frame shape</p>
-                <label class="filters__label">
-                    <input type="checkbox" name="round" class="filters__checkbox">
-                    Round
-                </label>
-                <label class="filters__label">
-                    <input type="checkbox" name="rectangle" class="filters__checkbox">
-                    Rectangle
-                </label>
-                <label class="filters__label">
-                    <input type="checkbox" name="pilot" class="filters__checkbox">
-                    Pilot/ Aviator
-                </label>
-                <label class="filters__label">
-                    <input type="checkbox" name="square" class="filters__checkbox">
-                    Square
-                </label>
-            </div>
+                <h4>Filter by</h4>
+                <div class="filters__group">
+                    <p>Gender</p>
+                    <label class="filters__label">
+                        <input type="checkbox" name="men" class="filters__checkbox">
+                        Men
+                    </label>
+                    <label class="filters__label">
+                        <input type="checkbox" name="women" class="filters__checkbox">
+                        Women
+                    </label>
+                </div>
 
+                <div class="filters__group">
+                    <p>Frame shape</p>
+                    <label class="filters__label">
+                        <input type="checkbox" name="round" class="filters__checkbox">
+                        Round
+                    </label>
+                    <label class="filters__label">
+                        <input type="checkbox" name="rectangle" class="filters__checkbox">
+                        Rectangle
+                    </label>
+                    <label class="filters__label">
+                        <input type="checkbox" name="pilot" class="filters__checkbox">
+                        Pilot/ Aviator
+                    </label>
+                    <label class="filters__label">
+                        <input type="checkbox" name="square" class="filters__checkbox">
+                        Square
+                    </label>
+                </div>
+
+            </form>
         </side>
 
 

@@ -5,19 +5,44 @@
         display: flex;
         flex-direction: column;
         font-family: $primary-font;
-        margin-bottom: 40px;
+        margin-top: 40px;
         margin-left: 20px;
         color: $font-color;
+    }
+
+    &__order {
+        width: 100%;
+        appearance: none;
+        font-family: $primary-font;
+        padding: 11px 54px 11px 10px;
+        background: url("../images/down.png") no-repeat;
+        background-size: 7%;
+        background-position: 95% 50%;
+        margin-bottom: 20px;
     }
 
     p {
         margin-bottom: 20px;
     }
 
+    h4 {
+        font-family: $primary-font;
+        color: $font-color;
+        font-weight: 500;
+        border-bottom: 1px solid #515a62;
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+
     &__label {
         margin-bottom: 10px;
         padding-right: 100px;
         vertical-align:middle;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
