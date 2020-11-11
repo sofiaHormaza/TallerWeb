@@ -102,17 +102,32 @@ function renderProducts(list) {
 let objectsList = [];
 
 function getProducts() {
-  productsRef.get().then((querySnapshot) => {
-    objectsList = [];
-    querySnapshot.forEach((doc) => {
-      const obj = doc.data();
-      obj.id = doc.id;
-      objectsList.push(obj);
-      console.log(`${doc.id} => ${doc.data()}`);
+  if (window.location.href.indexOf("Sun") > -1) {
+    productsRef.where('type', "==", "sun").get().then((querySnapshot) => {
+      objectsList = [];
+      querySnapshot.forEach((doc) => {
+        const obj = doc.data();
+        obj.id = doc.id;
+        objectsList.push(obj);
+        console.log(`${doc.id} => ${doc.data()}`);
+      });
+      renderProducts(objectsList);
+      loader.classList.remove('loader--show');
     });
-    renderProducts(objectsList);
-    loader.classList.remove('loader--show');
-  });
+  } else if (window.location.href.indexOf("Optical") > -1){
+    productsRef.where('type', "==", "optical").get().then((querySnapshot) => {
+      objectsList = [];
+      querySnapshot.forEach((doc) => {
+        const obj = doc.data();
+        obj.id = doc.id;
+        objectsList.push(obj);
+        console.log(`${doc.id} => ${doc.data()}`);
+      });
+      renderProducts(objectsList);
+      loader.classList.remove('loader--show');
+    });
+  }
+  
 }
 
 getProducts();
@@ -183,7 +198,7 @@ imagesP.forEach(function (group, index) {
 
 //Ordenar productos
 
-const sort = document.querySelector('.filters__order');
+/*const sort = document.querySelector('.filters__order');
 
 var sortValue;
 
@@ -213,11 +228,62 @@ sort.addEventListener('input', function () {
   }
 
   renderProducts(copy);
+});*/
+
+const filterForm = document.querySelector('.filters__form');
+
+filterForm.addEventListener('change', function () {
+
+  let copy = objectsList.slice();
+
+  const order = filterForm.order.value;
+  switch (order) {
+    case 'low':
+      copy.sort(function (a, b) {
+        return a.price - b.price;
+      });
+      break;
+    case 'high':
+      copy.sort(function (a, b) {
+        return b.price - a.price;
+      });
+      break;
+    case 'newest':
+      copy.sort(function (a, b) {
+        return b.date - a.date;
+      });
+      break;
+  }
+
+  const filters = document.querySelectorAll('.filters__checkbox');
+
+  const nameFilter = filterForm.filter.value;
+  if (nameFilter != '') {
+    copy = copy.filter(function (elem) {
+      if (elem.gender== nameFilter) {
+        return true;
+      }
+      if (elem.shape== nameFilter){
+        return true;
+      }
+      return false;
+    });
+  }
+
+  /*const price = filterForm.price.value;
+  if (price) {
+    copy = copy.filter(function (elem) {
+      if (elem.price < parseInt(price)) {
+        return true;
+      }
+    });
+  }*/
+
+  renderProducts(copy);
 });
 
 
 
-const filters = document.querySelectorAll('.filters__checkbox');
 
 function filterProducts() {
   filters.forEach(function (ch) {

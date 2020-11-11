@@ -34,17 +34,17 @@
 
 
     <section class="simple-banner--optical">
-        <h1 class="simple-banner__title">OPTICAL</h1>
+        <h1 class="simple-banner__title">SUNGLASSES</h1>
     </section>
 
 
     <div class="containerP">
 
-        <side class="filters">
+        <aside class="filters">
             <button class="button button--secondary hidden showAdmin">ADD PRODUCT</button>
             <form class="filters__form">
 
-                <select name="select-order" class="filters__order">
+                <select name="order" class="filters__order">
                     <option selected="selected">Sort by</option>
                     <option value="low">Price: Low to High</option>
                     <option value="high">Price: High to Low</option>
@@ -53,13 +53,19 @@
 
                 <h4>Filter by</h4>
                 <div class="filters__group">
+                    <label class="filters__label">
+                        <input type="radio" name="filter" value="" checked>
+                        All products
+                    </label>
+                </div>
+                <div class="filters__group">
                     <p>Gender</p>
                     <label class="filters__label">
-                        <input type="checkbox" name="men" class="filters__checkbox">
+                        <input type="radio" name="filter" value="men">
                         Men
                     </label>
                     <label class="filters__label">
-                        <input type="checkbox" name="women" class="filters__checkbox">
+                        <input type="radio" name="filter" value="women">
                         Women
                     </label>
                 </div>
@@ -67,25 +73,25 @@
                 <div class="filters__group">
                     <p>Frame shape</p>
                     <label class="filters__label">
-                        <input type="checkbox" name="round" class="filters__checkbox">
+                        <input type="radio" name="filter" value="round">
                         Round
                     </label>
                     <label class="filters__label">
-                        <input type="checkbox" name="rectangle" class="filters__checkbox">
+                        <input type="radio" name="filter" value="rectangle">
                         Rectangle
                     </label>
                     <label class="filters__label">
-                        <input type="checkbox" name="pilot" class="filters__checkbox">
+                        <input type="radio" name="filter" value="pilot">
                         Pilot/ Aviator
                     </label>
                     <label class="filters__label">
-                        <input type="checkbox" name="square" class="filters__checkbox">
+                        <input type="radio" name="filter" value="square">
                         Square
                     </label>
                 </div>
 
             </form>
-        </side>
+        </aside>
 
 
         <article class="products">
