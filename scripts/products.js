@@ -19,6 +19,7 @@ closeM.addEventListener('click', closeMHandle);
 //Database
 const db = firebase.firestore();
 const productsRef = db.collection('products');
+const bagRef = db.collection('bag');
 
 const productsList = document.querySelector('.products');
 const loader = document.querySelector('.loader');
@@ -47,6 +48,28 @@ function renderProducts(list) {
         <button class="button button--secondary product__addShop hideAdmin">ADD TO BAG</button>
       </div>
       `;
+
+
+      
+    bagProducts = [];
+    const addShop = newProduct.querySelector('.product__addShop');
+    addShop.addEventListener('click', function () {
+      const newBagItem = {
+        nameProduct: elem.nameProduct,
+        price: Number(elem.price),
+        image: elem.storageImgs[0],
+      };
+
+      bagProducts.push(newBagItem);
+      bagProducts2 = {
+        products: bagProducts,
+      }
+      console.log(userInfo.uid);
+
+      bagRef.doc(userInfo.uid).set(bagProducts2).catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
+    });
 
     //Mostrar imagen
     if (elem.storageImgs && elem.storageImgs.length > 0) {
@@ -109,25 +132,38 @@ function getProducts() {
         const obj = doc.data();
         obj.id = doc.id;
         objectsList.push(obj);
-        console.log(`${doc.id} => ${doc.data()}`);
+        //console.log(`${doc.id} => ${doc.data()}`);
       });
       renderProducts(objectsList);
       loader.classList.remove('loader--show');
     });
-  } else if (window.location.href.indexOf("Optical") > -1){
+  } else if (window.location.href.indexOf("Optical") > -1) {
     productsRef.where('type', "==", "optical").get().then((querySnapshot) => {
       objectsList = [];
       querySnapshot.forEach((doc) => {
         const obj = doc.data();
         obj.id = doc.id;
         objectsList.push(obj);
-        console.log(`${doc.id} => ${doc.data()}`);
+        //console.log(`${doc.id} => ${doc.data()}`);
       });
       renderProducts(objectsList);
       loader.classList.remove('loader--show');
     });
   }
-  
+
+}
+
+function getBag() {
+  bagRef
+    .doc(userInfo.uid)
+    .get()
+    .then((doc) => {
+      if(doc.exists){
+        bagProducts = doc.data().products;
+      }
+    }).catch(function (error) {
+      console.log("hola: ", error);
+    });
 }
 
 getProducts();
@@ -198,38 +234,6 @@ imagesP.forEach(function (group, index) {
 
 //Ordenar productos
 
-/*const sort = document.querySelector('.filters__order');
-
-var sortValue;
-
-sort.addEventListener('input', function () {
-  sortValue = sort.value;
-  let copy = objectsList.slice();
-
-  switch (sortValue) {
-
-    case 'low':
-      copy.sort(function (a, b) {
-        return a.price - b.price;
-      });
-      break;
-
-    case 'high':
-      copy.sort(function (a, b) {
-        return b.price - a.price;
-      });
-      break;
-
-    case 'newest':
-      copy.sort(function (a, b) {
-        return b.date - a.date;
-      });
-      break;
-  }
-
-  renderProducts(copy);
-});*/
-
 const filterForm = document.querySelector('.filters__form');
 
 filterForm.addEventListener('change', function () {
@@ -255,73 +259,18 @@ filterForm.addEventListener('change', function () {
       break;
   }
 
-  const filters = document.querySelectorAll('.filters__checkbox');
-
   const nameFilter = filterForm.filter.value;
   if (nameFilter != '') {
     copy = copy.filter(function (elem) {
-      if (elem.gender== nameFilter) {
+      if (elem.gender == nameFilter) {
         return true;
       }
-      if (elem.shape== nameFilter){
+      if (elem.shape == nameFilter) {
         return true;
       }
       return false;
     });
   }
 
-  /*const price = filterForm.price.value;
-  if (price) {
-    copy = copy.filter(function (elem) {
-      if (elem.price < parseInt(price)) {
-        return true;
-      }
-    });
-  }*/
-
   renderProducts(copy);
 });
-
-
-
-
-function filterProducts() {
-  filters.forEach(function (ch) {
-    ch.addEventListener('change', function () {
-      if (ch.checked) {
-        var filterNow;
-        switch (ch.name) {
-          case 'men':
-            filterNow = productsRef.where('gender', "==", "men");
-            break;
-          case 'women':
-            filterNow = productsRef.where('gender', "==", "women");
-            break;
-        }
-
-        filterNow.get().then((querySnapshot) => {
-          const objects = [];
-          querySnapshot.forEach((doc) => {
-            const obj = doc.data();
-            obj.id = doc.id;
-            objects.push(obj);
-            console.log(`${doc.id} => ${doc.data()}`);
-          });
-          renderProducts(objects);
-        });
-
-      } else {
-        productsRef.get().then((querySnapshot) => {
-          const objects = [];
-          querySnapshot.forEach((doc) => {
-            const obj = doc.data();
-            obj.id = doc.id;
-            objects.push(obj);
-            console.log(`${doc.id} => ${doc.data()}`);
-          });
-          renderProducts(objects);
-        });
-      }
-    });
-  });
-}

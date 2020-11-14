@@ -51,7 +51,6 @@ window.addEventListener('load', function () {
             elem.addEventListener('click', galleryHandle);
         });
 
-        //document.querySelector('.details__thumb1').setAttribute('src', product.img);
         document.querySelector('.details__title').innerText = product.nameProduct;
         document.querySelector('.details__price').innerText = '$' + product.price;
         document.querySelector('.details__text').innerText = product.descrip;

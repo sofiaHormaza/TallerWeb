@@ -26,6 +26,11 @@ firebase.auth().onAuthStateChanged(function (user) {
             if (doc.exists) {
                 const data = doc.data();
                 userInfo = data;
+                userInfo.uid = user.uid;
+
+                if(window.getCart){
+                    getCart();
+                  }
 
                 //Mostrar las opciones del admin
                 if (data.admin) {
