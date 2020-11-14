@@ -7,7 +7,6 @@
     function renderBagProducts(list) {
         productsBagList.innerHTML = '';
         list.forEach(function (elem, i) {
-        console.log(elem.nameProduct);
           const newBagProduct = document.createElement('section');
           newBagProduct.classList.add('purchases__item');
       
@@ -29,16 +28,39 @@
             }).catch(function (error) {
               // Handle any errors
             });
+
+            //Prueba
+            bagRef.doc(userInfo.uid).get().then((doc) => {
+                if(doc.exists){
+                    //console.log(doc.data().products);
+                    var val = doc.data().products.reduce(function(previousValue, currentValue) {
+                        return {
+                          price: previousValue.price + currentValue.price,
+                        }
+                      });
+                      
+                      document.querySelector('.purchases__total').innerHTML = `<strong>Total: </strong>${val.price}`;
+                }
+              });
       
           //Delete
           const deleteButton = newBagProduct.querySelector('.purchases__remove');
           deleteButton.addEventListener('click', function () {
-            bagRef.doc(userInfo.uid).delete().then(function () {
+            /*bagRef.doc(userInfo.uid).delete().then(function () {
               console.log("Document successfully deleted!");
               getBagProducts();
             })
               .catch(function (error) {
                 console.error("Error removing document: ", error);
+              });*/
+
+              bagRef.doc(userInfo.uid).get().then((doc) => {
+                if(doc.exists){
+                    doc.data().products.then(function () {
+                        console.log("Document successfully deleted!");
+                        getBagProducts();
+                      });
+                }
               });
           });
         
@@ -56,7 +78,15 @@
                 });
             }
             
-            
             renderBagProducts(bagList);
+          });
+    }
+
+    function getNumberItems (){
+        bagRef.doc(userInfo.uid).get().then((doc) => {
+            if(doc.exists){
+                numberBag.innerText = doc.data().products.length;
+            }
+    
           });
     }

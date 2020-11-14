@@ -2,6 +2,7 @@ const auth = document.querySelector('.header__user');
 const bag = document.querySelector('.header__shop');
 const authSignout = document.querySelector('.profile__container button');
 const authBurger = document.querySelector('.burger-menu__profile');
+const numberBag = document.querySelector('.header__number');
 userName = document.querySelector('.profile__usernameB');
 userName2 = document.querySelector('.profile__username');
 emailP = document.querySelector('.profile__email');
@@ -36,6 +37,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
                   if(window.getBagProducts){
                     getBagProducts ();
+                    getNumberItems();
                   }
                   
 

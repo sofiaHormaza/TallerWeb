@@ -49,7 +49,7 @@ function renderProducts(list) {
       </div>
       `;
 
-      
+
     bagProducts = [];
     const addShop = newProduct.querySelector('.product__addShop');
     addShop.addEventListener('click', function () {
@@ -63,8 +63,7 @@ function renderProducts(list) {
       bagProducts2 = {
         products: bagProducts,
       }
-      console.log(userInfo.uid);
-
+      
       bagRef.doc(userInfo.uid).set(bagProducts2).catch(function(error) {
       console.error("Error adding document: ", error);
   });
