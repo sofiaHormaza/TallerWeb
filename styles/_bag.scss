@@ -1,11 +1,17 @@
 .purchases {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: $primary-color;
 
     &__container {
-        width: 80%;
+        width: 70%;
         margin: 50px 0px;
+    }
+
+    &__container2 {
+        width: 70%;
     }
 
     &__item {
@@ -54,7 +60,7 @@
     &__resume {
         width: 100%;
         text-align: right;
-        margin-top: 50px;
+        margin-bottom: 50px;
         font-family: $primary-font;
         color: $font-color;
         font-size: 18px;
@@ -86,9 +92,5 @@
             }
         }
 
-        &__quanC {
-            width: 60%;
-            margin-bottom: 20px;
-        }
     }
 }

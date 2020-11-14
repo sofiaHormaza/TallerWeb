@@ -49,7 +49,6 @@ function renderProducts(list) {
       </div>
       `;
 
-
       
     bagProducts = [];
     const addShop = newProduct.querySelector('.product__addShop');

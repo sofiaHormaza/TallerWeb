@@ -14,9 +14,11 @@ firebase.auth().onAuthStateChanged(function (user) {
         if (window.location.href.indexOf("Html") > -1) {
             auth.href = './profile.html';
             authBurger.href = './profile.html';
+            bag.href = './bag.html';
         } else {
             auth.href = './Html/profile.html';
             authBurger.href = './Html/profile.html';
+            bag.href = './Html/bag.html';
             loader.classList.add('loader--show');
         }
 
@@ -28,9 +30,14 @@ firebase.auth().onAuthStateChanged(function (user) {
                 userInfo = data;
                 userInfo.uid = user.uid;
 
-                if(window.getCart){
-                    getCart();
+                if(window.getBag){
+                    getBag();
                   }
+
+                  if(window.getBagProducts){
+                    getBagProducts ();
+                  }
+                  
 
                 //Mostrar las opciones del admin
                 if (data.admin) {
@@ -58,9 +65,11 @@ firebase.auth().onAuthStateChanged(function (user) {
         if (window.location.href.indexOf("Html") > -1) {
             auth.href = './login.html';
             authBurger.href = './login.html';
+            bag.href = './login.html';
         } else {
             auth.href = './Html/login.html';
             authBurger.href = './Html/login.html';
+            bag.href = './Html/login.html';
         }
     }
 });
