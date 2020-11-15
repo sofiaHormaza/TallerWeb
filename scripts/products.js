@@ -50,10 +50,10 @@ function renderProducts(list) {
       `;
 
 
-    bagProducts = [];
+    let bagProducts = [];
     const addShop = newProduct.querySelector('.product__addShop');
 
-    /*function bagList(aList) {
+    function bagList(aList) {
       let bagProductsArray = aList;
       if (userInfo) {
         const newBagProducts = {
@@ -72,10 +72,33 @@ function renderProducts(list) {
           console.error("Error adding document: ", error);
         });
       }
-    }*/
+    }
+
+    function getBag() {
+      bagRef
+        .doc(userInfo.uid)
+        .get()
+        .then((doc) => {
+          if (doc.exists && doc.data().products != undefined) {
+            bagProducts = doc.data().products;
+            aList2= doc.data().products;
+            bagList(bagProducts);
+          }else if(doc.exists && doc.data().products ==undefined){
+            bagList(bagProducts);
+          }else if(!doc.exists){
+            bagList(bagProducts);
+          }
+        }).catch(function (error) {
+          console.log("Error: ", error);
+        });
+    }
 
     addShop.addEventListener('click', function () {
-      const newBagItem = {
+
+      if(userInfo) {
+        getBag();
+      }
+      /*const newBagItem = {
         nameProduct: elem.nameProduct,
         price: Number(elem.price),
         image: elem.storageImgs[0],
@@ -88,7 +111,7 @@ function renderProducts(list) {
 
       bagRef.doc(userInfo.uid).set(bagProducts2).catch(function (error) {
         console.error("Error adding document: ", error);
-      });
+      });*/
     });
 
     //Mostrar imagen
@@ -173,18 +196,7 @@ function getProducts() {
 
 }
 
-function getBag() {
-  bagRef
-    .doc(userInfo.uid)
-    .get()
-    .then((doc) => {
-      if (doc.exists) {
-        bagProducts = doc.data().products;
-      }
-    }).catch(function (error) {
-      console.log("Error: ", error);
-    });
-}
+
 
 getProducts();
 

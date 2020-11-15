@@ -30,7 +30,7 @@ formCheck.addEventListener('submit', function(event){
       });
 })
 
-function getBag() {
+function getBagCheck() {
     checkRef
       .doc(userInfo.uid)
       .get()
@@ -43,7 +43,7 @@ function getBag() {
       });
   }
 
-function getCosaFea(){
+function getOrders(){
     bagRef.doc(userInfo.uid).get().then((doc) => {
         if(doc.exists){
             doc.data().products.forEach (function (item) {

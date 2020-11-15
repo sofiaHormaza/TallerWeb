@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             auth.href = './Html/profile.html';
             authBurger.href = './Html/profile.html';
             bag.href = './Html/bag.html';
-            loader.classList.add('loader--show');
+            //loader.classList.add('loader--show');
         }
 
         const db = firebase.firestore();
@@ -31,8 +31,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                 userInfo = data;
                 userInfo.uid = user.uid;
 
-                if(window.getBag){
-                    getBag();
+                if(window.getBagCheck){
+                    getBagCheck();
                   }
 
                   if(window.getBagProducts){
@@ -40,8 +40,8 @@ firebase.auth().onAuthStateChanged(function (user) {
                     getNumberItems();
                   }
                   
-                  if(window.getCosaFea){
-                    getCosaFea();
+                  if(window.getOrders){
+                    getOrders();
                   }
 
                 //Mostrar las opciones del admin
