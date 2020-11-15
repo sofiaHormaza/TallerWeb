@@ -39,7 +39,7 @@
                         }
                       });
                       
-                      document.querySelector('.purchases__total').innerHTML = `<strong>Total: </strong>${val.price}`;
+                      document.querySelector('.purchases__total').innerHTML = `<strong>Total: </strong>$${val.price}`;
                 }
               });
       
@@ -85,7 +85,7 @@
     function getNumberItems (){
         bagRef.doc(userInfo.uid).get().then((doc) => {
             if(doc.exists){
-                numberBag.innerText = doc.data().products.length;
+                numberBag.innerHTML = `<strong>Products on the bag: </strong>${doc.data().products.length}`;
             }
     
           });
