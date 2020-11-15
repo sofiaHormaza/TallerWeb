@@ -40,6 +40,9 @@ firebase.auth().onAuthStateChanged(function (user) {
                     getNumberItems();
                   }
                   
+                  if(window.getCosaFea){
+                    getCosaFea();
+                  }
 
                 //Mostrar las opciones del admin
                 if (data.admin) {

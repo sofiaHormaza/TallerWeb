@@ -52,6 +52,28 @@ function renderProducts(list) {
 
     bagProducts = [];
     const addShop = newProduct.querySelector('.product__addShop');
+
+    /*function bagList(aList) {
+      let bagProductsArray = aList;
+      if (userInfo) {
+        const newBagProducts = {
+          nameProduct: elem.nameProduct,
+          price: Number(elem.price),
+          image: elem.storageImgs[0],
+        }
+
+        bagProductsArray.push(newBagProducts);
+
+        aList2 = {
+          products: bagProductsArray,
+        }
+
+        bagRef.doc(userInfo.uid).set(aList2).catch(function (error) {
+          console.error("Error adding document: ", error);
+        });
+      }
+    }*/
+
     addShop.addEventListener('click', function () {
       const newBagItem = {
         nameProduct: elem.nameProduct,
@@ -63,10 +85,10 @@ function renderProducts(list) {
       bagProducts2 = {
         products: bagProducts,
       }
-      
-      bagRef.doc(userInfo.uid).set(bagProducts2).catch(function(error) {
-      console.error("Error adding document: ", error);
-  });
+
+      bagRef.doc(userInfo.uid).set(bagProducts2).catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
     });
 
     //Mostrar imagen
@@ -156,11 +178,11 @@ function getBag() {
     .doc(userInfo.uid)
     .get()
     .then((doc) => {
-      if(doc.exists){
+      if (doc.exists) {
         bagProducts = doc.data().products;
       }
     }).catch(function (error) {
-      console.log("hola: ", error);
+      console.log("Error: ", error);
     });
 }
 
