@@ -31,10 +31,6 @@ firebase.auth().onAuthStateChanged(function (user) {
                 userInfo = data;
                 userInfo.uid = user.uid;
 
-                if(window.getBagCheck){
-                    getBagCheck();
-                  }
-
                   if(window.getBagProducts){
                     getBagProducts ();
                     getNumberItems();
@@ -42,6 +38,10 @@ firebase.auth().onAuthStateChanged(function (user) {
                   
                   if(window.getOrders){
                     getOrders();
+                  }
+
+                  if(window.getTotals){
+                    getTotals();
                   }
 
                 //Mostrar las opciones del admin

@@ -86,6 +86,7 @@
         bagRef.doc(userInfo.uid).get().then((doc) => {
             if(doc.exists){
                 numberBag.innerHTML = `<strong>Products on the bag: </strong>${doc.data().products.length}`;
+                localStorage.setItem('quantity', doc.data().products.length);
             }
     
           });
