@@ -44,6 +44,13 @@ firebase.auth().onAuthStateChanged(function (user) {
                     getTotals();
                   }
 
+                  if(window.getDelete){
+                    const checkBtn = document.querySelector('.checkBtn');
+                    checkBtn.addEventListener('click', function(){
+                        getDelete();
+                    });
+                  }
+
                 //Mostrar las opciones del admin
                 if (data.admin) {
                     const showAdmin = document.querySelectorAll('.showAdmin');

@@ -3,7 +3,7 @@ const bagRef = db.collection('bag');
 const checkRef = db.collection('orders');
 
 const formCheck = document.querySelector('.checkout__pay');
-const checkBtn = document.querySelector('.checkBtn');
+
 
 let arrayOrders;
 formCheck.addEventListener('submit', function (event) {
@@ -32,6 +32,8 @@ formCheck.addEventListener('submit', function (event) {
 })
 
 
+
+
 function getOrders() {
   bagRef.doc(userInfo.uid).get().then((doc) => {
     if (doc.exists) {
@@ -55,4 +57,13 @@ function getTotals() {
       });
     }
   });
+}
+
+function getDelete(){
+    bagRef.doc(userInfo.uid).delete().then(function () {
+      console.log("Document successfully deleted!");
+    })
+      .catch(function (error) {
+        console.error("Error removing document: ", error);
+      });
 }
