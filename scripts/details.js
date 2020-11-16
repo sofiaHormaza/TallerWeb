@@ -1,4 +1,10 @@
 let bagProducts = [];
+const closeF = document.querySelector('.feedback__close');
+const feedback = document.querySelector('.feedback');
+
+closeF.addEventListener('click', function(){
+  feedback.classList.remove('feedback--showF');
+})
 
 window.addEventListener('load', function () {
 
@@ -64,6 +70,8 @@ window.addEventListener('load', function () {
             if (userInfo) {
                 getBag();
             }
+
+            feedback.classList.add('feedback--showF');
         });
 
         function bagList(aList) {
