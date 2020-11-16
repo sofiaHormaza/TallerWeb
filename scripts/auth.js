@@ -46,9 +46,15 @@ firebase.auth().onAuthStateChanged(function (user) {
 
                   if(window.getDelete){
                     const checkBtn = document.querySelector('.checkBtn');
+                    const success = document.querySelector('.success');
+                    const checkEnd = document.querySelector('.success');
                     checkBtn.addEventListener('click', function(){
                         getDelete();
+                        success.classList.add('success--showS');
                     });
+                    checkEnd.addEventListener('click', function(){
+                        success.classList.remove('success--showS');
+                      })
                   }
 
                 //Mostrar las opciones del admin
