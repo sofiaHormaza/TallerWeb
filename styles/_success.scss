@@ -39,3 +39,14 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .success {
+        &__container {
+            width: 80%;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
