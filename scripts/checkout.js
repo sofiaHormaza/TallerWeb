@@ -53,8 +53,6 @@ function getTotals() {
           price: previousValue.price + currentValue.price,
         }
       });
-
-      quan = doc.data().products.length;
     }
   });
 }
