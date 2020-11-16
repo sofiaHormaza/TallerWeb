@@ -2,6 +2,8 @@
 const modal = document.querySelector('.edit-add');
 const closeM = document.querySelector('.edit-add__close');
 const btnAdd = document.querySelector('.filters button');
+const closeF = document.querySelector('.feedback__close');
+const feedback = document.querySelector('.feedback');
 
 function openHandle() {
   modal.classList.add('edit-add--show');
@@ -15,6 +17,9 @@ function closeMHandle() {
 }
 closeM.addEventListener('click', closeMHandle);
 
+closeF.addEventListener('click', function(){
+  feedback.classList.remove('feedback--showF');
+})
 
 //Database
 const db = firebase.firestore();
@@ -98,20 +103,8 @@ function renderProducts(list) {
       if(userInfo) {
         getBag();
       }
-      /*const newBagItem = {
-        nameProduct: elem.nameProduct,
-        price: Number(elem.price),
-        image: elem.storageImgs[0],
-      };
-
-      bagProducts.push(newBagItem);
-      bagProducts2 = {
-        products: bagProducts,
-      }
-
-      bagRef.doc(userInfo.uid).set(bagProducts2).catch(function (error) {
-        console.error("Error adding document: ", error);
-      });*/
+      
+      feedback.classList.add('feedback--showF');
     });
 
     //Mostrar imagen

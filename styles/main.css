@@ -1275,6 +1275,28 @@ input[type=button] {
   padding: 30px 0px;
 }
 
+@media (max-width: 600px) {
+  .containerP {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .filters {
+    width: 85%;
+  }
+  .filters__group {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
 .products {
   width: 75%;
   display: -webkit-box;
@@ -1335,6 +1357,18 @@ input[type=button] {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .products {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 85%;
+  }
+  .products__glasses {
+    margin-bottom: 35px;
+  }
 }
 
 .edit-add {
@@ -1643,7 +1677,51 @@ input[type=button] {
   font-size: 40px;
   color: #515a62;
   font-weight: 600;
-  margin: 40px;
+  margin: 40px 0px;
+  text-align: center;
+}
+
+.orders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.orders__container {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.orders__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  color: #515a62;
+  padding: 20px 0px;
+  border-top: 1px solid #515a62;
+  border-bottom: 1px solid #515a62;
+}
+
+.orders__item h4 {
+  font-weight: 700;
 }
 
 @media (max-width: 600px) {
@@ -1683,6 +1761,21 @@ input[type=button] {
   .profile__info p {
     font-size: 12px;
     margin-bottom: 10px;
+  }
+  .orders__item {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 0px;
+  }
+  .orders__info {
+    margin-bottom: 10px;
+    font-size: 12px;
   }
 }
 
@@ -2004,6 +2097,9 @@ input[type=button] {
   .purchases__info p {
     margin-bottom: 5px;
   }
+  .purchases__resume h4 {
+    font-size: 15px;
+  }
 }
 
 .checkout {
@@ -2072,6 +2168,78 @@ input[type=button] {
     font-size: 20px;
   }
   .checkout__pay h4 {
+    font-size: 15px;
+  }
+}
+
+.feedback {
+  display: none;
+}
+
+.feedback--showF {
+  display: block;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.feedback__cont {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback__container {
+  width: 50%;
+  height: 50%;
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.feedback__container p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #515a62;
+  margin-top: 20px;
+}
+
+.feedback__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .feedback__container {
+    width: 80%;
+  }
+  .feedback__container p {
     font-size: 15px;
   }
 }

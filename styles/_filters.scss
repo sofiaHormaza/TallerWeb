@@ -53,3 +53,20 @@
     margin: 0 auto;
     padding: 30px 0px;
 }
+
+@media (max-width: 600px) {
+    .containerP{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filters {
+        width: 85%;
+
+        &__group {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+    }
+}
