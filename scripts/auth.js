@@ -16,11 +16,11 @@ firebase.auth().onAuthStateChanged(function (user) {
             auth.href = './profile.html';
             authBurger.href = './profile.html';
             bag.href = './bag.html';
+            loader.classList.add('loader--show');
         } else {
             auth.href = './Html/profile.html';
             authBurger.href = './Html/profile.html';
             bag.href = './Html/bag.html';
-            //loader.classList.add('loader--show');
         }
 
         const db = firebase.firestore();

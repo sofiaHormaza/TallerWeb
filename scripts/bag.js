@@ -65,6 +65,8 @@ function renderBagProducts(list) {
     });
 
     productsBagList.appendChild(newBagProduct);
+    const loader = document.querySelector('.loader');
+    loader.classList.remove('loader--show');
   });
 }
 
