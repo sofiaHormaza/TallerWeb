@@ -31,8 +31,6 @@ register.addEventListener('submit', function (event) {
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(error)
-
-            //register.querySelector('.form__error').classList.remove('hidden');
         });
     } else {
         alert ("Passwords don't match");

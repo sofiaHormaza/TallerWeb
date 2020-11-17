@@ -1,4 +1,3 @@
-//Show modal to edit or add a product
 const modal = document.querySelector('.edit-add');
 const closeM = document.querySelector('.edit-add__close');
 const btnAdd = document.querySelector('.filters button');
@@ -118,7 +117,7 @@ function renderProducts(list) {
 
     }
 
-    //Delete
+    //Borrar
     const deleteBtn = newProduct.querySelector('.products__remove');
     deleteBtn.addEventListener('click', function () {
       loader.classList.add('loader--show');
@@ -131,7 +130,7 @@ function renderProducts(list) {
         });
     });
 
-    //Edit
+    //Editar
     const editBtn = newProduct.querySelector('.product__edit');
     const shopBtn = newProduct.querySelector('.product__addShop');
     editBtn.addEventListener('click', function () {
@@ -147,7 +146,7 @@ function renderProducts(list) {
       opacity.classList.add('opacity--show');
     });
 
-    //Mostrar opciones del admin
+    //admin
     if (userInfo && userInfo.admin) {
       deleteBtn.classList.remove('hidden');
       editBtn.classList.remove('hidden');
@@ -168,7 +167,6 @@ function getProducts() {
         const obj = doc.data();
         obj.id = doc.id;
         objectsList.push(obj);
-        //console.log(`${doc.id} => ${doc.data()}`);
       });
       renderProducts(objectsList);
       loader.classList.remove('loader--show');
@@ -180,7 +178,6 @@ function getProducts() {
         const obj = doc.data();
         obj.id = doc.id;
         objectsList.push(obj);
-        //console.log(`${doc.id} => ${doc.data()}`);
       });
       renderProducts(objectsList);
       loader.classList.remove('loader--show');
@@ -188,8 +185,6 @@ function getProducts() {
   }
 
 }
-
-
 
 getProducts();
 
@@ -229,11 +224,11 @@ form.addEventListener('submit', function (event) {
   }
 
   if (selectedItem) {
-    //Edit
+    //Editar
     productsRef.doc(selectedItem.id).set(newProduct).then(handleThen).catch(handleCatch);
 
   } else {
-    //Add product
+    //Agregar producto
     productsRef.add(newProduct).then(handleThen).catch(handleCatch);
   }
 });
@@ -246,7 +241,7 @@ imagesP.forEach(function (group, index) {
 
     var newImageRef = storageRef.child(`products/${Math.floor(Math.random() * 999999999)}.webp`);
 
-    var file = group.files[0]; // use the Blob or File API
+    var file = group.files[0];
 
     newImageRef.put(file).then(function (snapshot) {
       console.log(snapshot)
@@ -257,7 +252,7 @@ imagesP.forEach(function (group, index) {
 });
 
 
-//Ordenar productos
+//Ordenar y filtrar productos
 
 const filterForm = document.querySelector('.filters__form');
 

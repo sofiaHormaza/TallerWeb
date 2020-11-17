@@ -15,8 +15,5 @@ login.addEventListener('submit', function (event) {
         .catch(function (error) {
             // Handle Errors here.
             console.log(error)
-
-            //login.querySelector('.form__error').classList.remove('hidden');
-            // ...
         });
 });
