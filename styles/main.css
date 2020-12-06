@@ -655,11 +655,18 @@ input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 83vh;
 }
 
 .ad__collection {
   width: 70%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .ad__name {
@@ -668,8 +675,6 @@ input[type=button] {
   color: white;
   line-height: 100%;
   margin-left: 150px;
-  margin-top: 150px;
-  margin-bottom: 100px;
 }
 
 .ad__image {
@@ -708,6 +713,7 @@ input[type=button] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 65vh;
   }
   .ad__collection {
     width: 100%;
