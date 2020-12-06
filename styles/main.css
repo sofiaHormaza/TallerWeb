@@ -2300,4 +2300,13 @@ input[type=button] {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+@media (max-width: 600px) {
+  .success__container {
+    width: 80%;
+  }
+  .success__container p {
+    font-size: 15px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
