@@ -59,8 +59,6 @@ gsap.from(".ad__info", {
     y: 150,
 })
 
-
-
 //Animación info de características
 gsap.from(".fromLeft", {
     scrollTrigger: {
@@ -90,4 +88,14 @@ gsap.from(".feature__title", {
     },
     duration: 1.5,
     text: ""
+})
+
+//Animación tabla
+gsap.from(".table__container", {
+    scrollTrigger: {
+        trigger: ".table__container",
+        start: "top bottom",
+    },
+    duration: 2.5,
+    opacity: 0,
 })
