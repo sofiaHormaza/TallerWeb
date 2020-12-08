@@ -94,8 +94,38 @@ gsap.from(".feature__title", {
 gsap.from(".table__container", {
     scrollTrigger: {
         trigger: ".table__container",
-        start: "top bottom",
+        start: "top center",
     },
     duration: 2.5,
     opacity: 0,
+})
+
+//Animación newsletter
+gsap.to(".newsletter__title", {
+    scrollTrigger: {
+        trigger: ".newsletter__title",
+        start: "bottom bottom",
+    },
+    duration: 1,
+    backgroundColor: "#FFDE54",
+})
+
+gsap.from(".goRight", {
+    scrollTrigger: {
+        trigger: ".goRight",
+        start: "bottom bottom",
+    },
+    duration: 1,
+    opacity: 0,
+    x: 150,
+})
+
+gsap.from(".goLeft", {
+    scrollTrigger: {
+        trigger: ".goLeft",
+        start: "bottom bottom",
+    },
+    duration: 1,
+    opacity: 0,
+    x: -150,
 })
