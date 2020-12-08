@@ -67,7 +67,7 @@ gsap.from(".fromLeft", {
     },
     duration: 1,
     opacity: 0,
-    x: -150,
+    x: -115,
 })
 
 gsap.from(".fromRight", {
@@ -77,7 +77,7 @@ gsap.from(".fromRight", {
     },
     duration: 1,
     opacity: 0,
-    x: 150,
+    x: 115,
 })
 
 //Animación títulos características
