@@ -17,7 +17,6 @@ let tl = gsap.timeline({
 });
 
 tl.from(".panel__text--green", {
-    opacity: 0,
     duration: 1,
     width: "0%",
 });
@@ -44,7 +43,6 @@ let tl2 = gsap.timeline({
 });
 
 tl2.from(".panel__text--yellow", {
-    opacity: 0,
     duration: 1,
     width: "0%",
 });
