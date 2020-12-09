@@ -2316,4 +2316,118 @@ input[type=button] {
     font-size: 15px;
   }
 }
+
+.beginning {
+  height: 88vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #98dec8;
+}
+
+.beginning__container {
+  width: 54%;
+  color: white;
+}
+
+.beginning__container h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 100px;
+}
+
+.beginning__container p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.panel {
+  height: 95vh;
+  background-color: white;
+  background-image: url("../images/pattern1.jpg");
+  background-position: 0% 0%;
+  background-size: cover;
+  position: relative;
+}
+
+.panel--green {
+  background-image: url("../images/pattern1.jpg");
+}
+
+.panel__model {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.panel__container {
+  padding-left: 40px;
+  width: 25%;
+  color: white;
+}
+
+.panel__container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 5px 0px 5px 0px;
+}
+
+.panel__price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: underline;
+  padding-bottom: 25px;
+}
+
+.panel__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 50px;
+}
+
+.panel__text {
+  height: 50%;
+  width: 100%;
+  background-color: #ffde54;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel__text--green {
+  background-color: #bae592;
+}
+
+.panel__bottom {
+  height: 50%;
+  width: 100%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 /*# sourceMappingURL=main.css.map */

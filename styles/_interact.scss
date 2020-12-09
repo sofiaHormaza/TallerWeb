@@ -1,0 +1,93 @@
+.beginning {
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondary-color;
+
+    &__container {
+        width: 54%;
+        color: white;
+
+        h1 {
+            font-family: $secondary-font;
+            font-size: 100px;
+        }
+
+        p {
+            font-family: $primary-font;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: right;
+        }
+    }
+}
+
+.panel {
+    height: 95vh;
+    background-color: white;
+    background-image: url("../images/pattern1.jpg");
+    background-position: 0% 0%;
+    background-size: cover;
+    position: relative;
+
+    &--green {
+        background-image: url("../images/pattern1.jpg");
+    }
+
+    &__model {
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__container {
+        padding-left: 40px;
+        width: 25%;
+        color: white;
+
+        h2 {
+            font-family: $primary-font;
+            font-weight: 500;
+            font-size: 20px;
+            padding: 5px 0px 5px 0px;
+        }
+    }
+
+    &__price {
+        font-family: $primary-font;
+        font-weight: 600;
+        font-size: 20px;
+        text-decoration: underline;
+        padding-bottom: 25px;
+    }
+
+    &__title {
+        font-family: $secondary-font;
+        font-size: 50px;
+    }
+
+    &__text {
+        height: 50%;
+        width: 100%;
+        background-color: #ffde54;
+        display: flex;
+        align-items: center;
+
+        &--green {
+            background-color: #bae592;
+        }
+    }
+
+    &__bottom {
+        height: 50%;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+}

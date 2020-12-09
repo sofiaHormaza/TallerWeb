@@ -1,14 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
-/*let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".bannerA",
-        toggleActions: "restart play resume reset",
-        start: "top center",
-    },
-});*/
-
 ScrollTrigger.defaults({
     toggleActions: "play restart restart reset"
 });
@@ -101,14 +93,6 @@ gsap.from(".table__container", {
 })
 
 //Animación newsletter
-gsap.to(".newsletter__title", {
-    scrollTrigger: {
-        trigger: ".newsletter__title",
-        start: "bottom bottom",
-    },
-    duration: 1,
-    backgroundColor: "#FFDE54",
-})
 
 gsap.from(".goRight", {
     scrollTrigger: {

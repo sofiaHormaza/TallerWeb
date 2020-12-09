@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Persol</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <img src="../images/burger.png" alt="" class="header__burger-menu">
+            <a href="../index.html" class="header__link">
+                <img src="../images/logo.png" alt="logo" class="header__logo">
+            </a>
+            <section class="header__categories">
+                <a href="../Html/productsSun.html" class="header__item">SUN</a>
+                <a href="../Html/productsOptical.html" class="header__item">OPTICAL</a>
+                <a href="#" class="header__item">ABOUT US</a>
+            </section>
+            <section class="header__icons">
+                <a href="#" class="header__iconLink header__user">
+                    <img src="../images/user_logo.png" alt="" class="header__icon">
+                </a>
+                <a href="#" class="header__iconLink header__shop">
+                    <img src="../images/shop_logo.png" alt="" class="header__icon">
+                </a>
+            </section>
+        </nav>
+    </header>
+
+
+    <div class="beginning segment blue">
+        <div class="beginning__container">
+            <h1>Glasses of the week</h1>
+            <p>Look at our latest models and interact with them via mouse/touch. You can zoom and rotate the glasses to view them in detail.</p>
+        </div>
+    </div>
+
+    <section class="panel panel--green segment green">
+        <div class="panel__text panel__text--green">
+            <div class="panel__container">
+                <h1 class="panel__title textGreen">PO2471S</h1>
+                <h2 class="panel__subtitle textGreen">Timeless elegance and high innovation make Persol sunglasses a work of art</h2>
+                <p class="panel__price textGreen">$420</p>
+                <button class="button button--primary buttonGreen">VIEW DETAILS</button>
+            </div>
+        </div>
+        <!--<model-viewer src="assets\scene.gltf" camera-controls auto-rotate><model-viewer>-->
+        <img src="../images/test.webp" alt="" class="panel__model">
+        <div class="pannel__bottom"></div>
+    </section>
+
+    <section class="panel segment yellow">
+        <div class="panel__text panel__text--yellow">
+            <div class="panel__container">
+                <h1 class="panel__title textYellow">PO3105S</h1>
+                <h2 class="panel__subtitle textYellow">Authentic designs uniquely crafted into one-of-a-kind eyeglasses</h2>
+                <p class="panel__price textYellow">$350</p>
+                <button class="button button--primary buttonYellow">VIEW DETAILS</button>
+            </div>
+        </div>
+        <!--<model-viewer src="assets\scene.gltf" camera-controls auto-rotate><model-viewer>-->
+        <img src="../images/test.webp" alt="" class="panel__model">
+        <div class="pannel__bottom"></div>
+    </section>
+
+
+    <footer class="footer segment">
+        <div class="footer__container">
+            <section class="footer__block-links">
+                <h3 class="footer__title">Persol</h3>
+                <a href="#" class="footer__link">Privacy</a>
+                <a href="#" class="footer__link">Terms of use </a>
+                <a href="#" class="footer__link">Terms of sale </a>
+            </section>
+            <section class="footer__block-links">
+                <h3 class="footer__title">Quick links</h3>
+                <a href="#" class="footer__link">Contact us</a>
+                <a href="#" class="footer__link">Shipping </a>
+                <a href="#" class="footer__link">FAQs</a>
+            </section>
+            <section class="footer__block-links footer__block-links--side">
+                <h3 class="footer__title">Follow us</h3>
+                <a href="https://www.facebook.com/Persol" class="footer__link--side">
+                    <img src="../images/facebook.png" alt="facebook">
+                </a>
+                <a href="http://instagram.com/persol" class="footer__link--side">
+                    <img src="../images/instagram.png" alt="instagram">
+                </a>
+                <a href="https://twitter.com/Persol" class="footer__link--side">
+                    <img src="../images/twitter.png" alt="twitter">
+                </a>
+                <a href="http://www.pinterest.com/persol" class="footer__link--side">
+                    <img src="../images/pinterest.png" alt="pinterest">
+                </a>
+            </section>
+        </div>
+    </footer>
+
+
+    <article class="burger-menu">
+        <img src="../images/close.png" alt="" class="burger-menu__close">
+        <section class="burger-menu__user">
+            <img src="../images/user_logo2.png" alt="" class="burger-menu__userImg">
+            <a href="#" class="burger-menu__profile">My profile</a>
+        </section>
+        <section class="burger-menu__categories">
+            <a href="../Html/productsSun.html" class="burger-menu__item">SUN</a>
+            <a href="../Html/productsOptical.html" class="burger-menu__item">OPTICAL</a>
+            <a href="#" class="burger-menu__item">ABOUT US</a>
+        </section>
+    </article>
+
+    <div class="opacity"></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="../scripts/firebaseConfig.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
+    <script src="../scripts/interaction.js"></script>
+    <script src="../scripts/auth.js"></script>
+    <script src="../scripts/menu.js"></script>
+</body>
+
+</html>
