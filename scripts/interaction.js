@@ -12,7 +12,7 @@ let tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".panel__text--green",
         toggleActions: "play restart restart reset",
-        start: "bottom bottom",
+        start: "top bottom",
     },
 });
 
@@ -20,17 +20,9 @@ tl.from(".panel__text--green", {
     opacity: 0,
     duration: 1,
     width: "0%",
-    scrollTrigger: {
-        trigger: ".panel__text--green",
-        start: "top bottom",
-    }
 });
 
 tl.from(".textGreen", {
-    scrollTrigger: {
-        trigger: ".panel__text--green",
-        start: "top bottom",
-    },
     duration: 1,
     opacity: 0,
     y: "random(-200,200)",
@@ -38,10 +30,6 @@ tl.from(".textGreen", {
 })
 
 tl.from(".buttonGreen", {
-    scrollTrigger: {
-        trigger: ".panel__text--green",
-        start: "top bottom",
-    },
     duration: 1,
     scale: 0,
 })
@@ -51,7 +39,7 @@ let tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: ".panel__text--yellow",
         toggleActions: "play restart restart reset",
-        start: "bottom bottom",
+        start: "top bottom",
     },
 });
 
@@ -59,17 +47,9 @@ tl2.from(".panel__text--yellow", {
     opacity: 0,
     duration: 1,
     width: "0%",
-    scrollTrigger: {
-        trigger: ".panel__text--yellow",
-        start: "top bottom",
-    }
 });
 
 tl2.from(".textYellow", {
-    scrollTrigger: {
-        trigger: ".panel__text--yellow",
-        start: "top bottom",
-    },
     duration: 1,
     opacity: 0,
     y: "random(-200,200)",
@@ -77,10 +57,6 @@ tl2.from(".textYellow", {
 })
 
 tl2.from(".buttonYellow", {
-    scrollTrigger: {
-        trigger: ".panel__text--yellow",
-        start: "top bottom",
-    },
     duration: 1,
     scale: 0,
 })
