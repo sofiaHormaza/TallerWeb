@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     @include backInteractImage(url("../images/glassesNewPage.jpg"), 88vh, 55% 24%);
+    background-size: cover;
 
     &__container {
         width: 54%;
@@ -50,13 +51,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        .poster{
-            background-color: transparent;
-            #default-poster {
-                background-color: transparent;
-            }
-        }
-        
     }
 
     &__container {
@@ -107,10 +101,9 @@
     }
 }
 
-
 @media (max-width: 600px) {
     .beginning {
-        height: 50vh;
+        @include backInteractImage(url("../images/glassesNewPage.jpg"), 40vh, 55% 24%);
         &__container {
             width: 75%;
             h1 {
@@ -139,7 +132,8 @@
 
         &__model {
             width: 70%;
-            top: 75%;
+            top: 91%;
+            height: 211px;
             left: 50%;
             transform: translate(-50%, -75%);
         }

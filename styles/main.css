@@ -2335,6 +2335,7 @@ input[type=button] {
   background-image: url("../images/glassesNewPage.jpg");
   height: 88vh;
   background-position: 55% 24%;
+  background-size: cover;
 }
 
 .beginning__container {
@@ -2375,14 +2376,6 @@ input[type=button] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.panel__model .poster {
-  background-color: transparent;
-}
-
-.panel__model .poster #default-poster {
-  background-color: transparent;
 }
 
 .panel__container {
@@ -2442,9 +2435,15 @@ input[type=button] {
           justify-content: flex-end;
 }
 
+.container {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .beginning {
-    height: 50vh;
+    background-image: url("../images/glassesNewPage.jpg");
+    height: 40vh;
+    background-position: 55% 24%;
   }
   .beginning__container {
     width: 75%;
@@ -2474,7 +2473,8 @@ input[type=button] {
   }
   .panel__model {
     width: 70%;
-    top: 75%;
+    top: 91%;
+    height: 211px;
     left: 50%;
     -webkit-transform: translate(-50%, -75%);
             transform: translate(-50%, -75%);
