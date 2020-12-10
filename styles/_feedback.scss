@@ -29,12 +29,12 @@
         align-items: center;
         position: relative;
 
-        p {
+        &__p {
             font-family: $primary-font;
             font-weight:500;
             font-size: 20px;
             color: $font-color;
-            margin-top: 20px;
+            margin-top: 38px;
         }
     }
 

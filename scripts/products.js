@@ -3,6 +3,7 @@ const closeM = document.querySelector('.edit-add__close');
 const btnAdd = document.querySelector('.filters button');
 const closeF = document.querySelector('.feedback__close');
 const feedback = document.querySelector('.feedback');
+gsap.registerPlugin(TextPlugin);
 
 function openHandle() {
   modal.classList.add('edit-add--show');
@@ -16,7 +17,7 @@ function closeMHandle() {
 }
 closeM.addEventListener('click', closeMHandle);
 
-closeF.addEventListener('click', function(){
+closeF.addEventListener('click', function () {
   feedback.classList.remove('feedback--showF');
 })
 
@@ -85,11 +86,11 @@ function renderProducts(list) {
         .then((doc) => {
           if (doc.exists && doc.data().products != undefined) {
             bagProducts = doc.data().products;
-            aList2= doc.data().products;
+            aList2 = doc.data().products;
             bagList(bagProducts);
-          }else if(doc.exists && doc.data().products ==undefined){
+          } else if (doc.exists && doc.data().products == undefined) {
             bagList(bagProducts);
-          }else if(!doc.exists){
+          } else if (!doc.exists) {
             bagList(bagProducts);
           }
         }).catch(function (error) {
@@ -99,11 +100,50 @@ function renderProducts(list) {
 
     addShop.addEventListener('click', function () {
 
-      if(userInfo) {
+      if (userInfo) {
         getBag();
+
+        feedback.classList.add('feedback--showF');
+
+        gsap.from(".feedback__container", {
+          duration: 1,
+          scale: 0,
+          stagger: 0.25,
+        })
+
+        const bagimg = document.querySelector('.feedback__img');
+
+        const pos = gsap.timeline({});
+        pos.to(bagimg, { y: 0, duration: 1 });
+        pos.to(bagimg, { y: -50, duration: .3 });
+        pos.to(bagimg, { y: 0, duration: .6 });
+        pos.to(bagimg, { y: -50, duration: .3 });
+        pos.to(bagimg, { y: 0, duration: .6 });
+        pos.to(bagimg, { y: -50, duration: .3 });
+        pos.to(bagimg, { y: 0, duration: .6 });
+        pos.to(bagimg, { y: -50, duration: .3 });
+        pos.to(bagimg, { y: 0, duration: .6 });
+
+        const rot = gsap.timeline({});
+        rot.to(bagimg, { rotation: 0, duration: 1 });
+        rot.to(bagimg, { rotation: 20, duration: .3 });
+        rot.to(bagimg, { rotation: 0, duration: .6 });
+        rot.to(bagimg, { rotation: -40, duration: .6 });
+        rot.to(bagimg, { rotation: 0, duration: .6 });
+        rot.to(bagimg, { rotation: 20, duration: .3 });
+        rot.to(bagimg, { rotation: 0, duration: .6 });
+        rot.to(bagimg, { rotation: -40, duration: .6 });
+        rot.to(bagimg, { rotation: 0, duration: .6 });
+        pos.delay(.01);
+
+        gsap.from(".feedback__p", {
+          duration: 3,
+          opacity: 0,
+          stagger: 0.25,
+        })
+
       }
-      
-      feedback.classList.add('feedback--showF');
+
     });
 
     //Mostrar imagen

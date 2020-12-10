@@ -69,9 +69,47 @@ window.addEventListener('load', function () {
         shopDetailsBtn.addEventListener('click', function () {
             if (userInfo) {
                 getBag();
+
+                feedback.classList.add('feedback--showF');
+
+                gsap.from(".feedback__container", {
+                  duration: 1,
+                  scale: 0,
+                  stagger: 0.25,
+                })
+        
+                const bagimg = document.querySelector('.feedback__img');
+        
+                const pos = gsap.timeline({});
+                pos.to(bagimg, { y: 0, duration: 1 });
+                pos.to(bagimg, { y: -50, duration: .3 });
+                pos.to(bagimg, { y: 0, duration: .6 });
+                pos.to(bagimg, { y: -50, duration: .3 });
+                pos.to(bagimg, { y: 0, duration: .6 });
+                pos.to(bagimg, { y: -50, duration: .3 });
+                pos.to(bagimg, { y: 0, duration: .6 });
+                pos.to(bagimg, { y: -50, duration: .3 });
+                pos.to(bagimg, { y: 0, duration: .6 });
+        
+                const rot = gsap.timeline({});
+                rot.to(bagimg, { rotation: 0, duration: 1 });
+                rot.to(bagimg, { rotation: 20, duration: .3 });
+                rot.to(bagimg, { rotation: 0, duration: .6 });
+                rot.to(bagimg, { rotation: -40, duration: .6 });
+                rot.to(bagimg, { rotation: 0, duration: .6 });
+                rot.to(bagimg, { rotation: 20, duration: .3 });
+                rot.to(bagimg, { rotation: 0, duration: .6 });
+                rot.to(bagimg, { rotation: -40, duration: .6 });
+                rot.to(bagimg, { rotation: 0, duration: .6 });
+                pos.delay(.01);
+        
+                gsap.from(".feedback__p", {
+                  duration: 3,
+                  opacity: 0,
+                  stagger: 0.25,
+                })
             }
 
-            feedback.classList.add('feedback--showF');
         });
 
         function bagList(aList) {

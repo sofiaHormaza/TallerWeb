@@ -2232,7 +2232,7 @@ input[type=button] {
   font-weight: 500;
   font-size: 20px;
   color: #515a62;
-  margin-top: 20px;
+  margin-top: 38px;
 }
 
 .feedback__close {
@@ -2433,10 +2433,6 @@ input[type=button] {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-model-viewer #reveal {
-  display: none;
 }
 
 @media (max-width: 600px) {
