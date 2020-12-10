@@ -1,10 +1,16 @@
+@mixin backInteractImage($bg, $heig, $bp) {
+    background-image: $bg;
+    height: $heig;
+    background-position: $bp;
+}
+
 .beginning {
     height: 88vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $secondary-color;
+    @include backInteractImage(url("../images/glassesNewPage.jpg"), 88vh, 55% 24%);
 
     &__container {
         width: 54%;
@@ -38,10 +44,19 @@
 
     &__model {
         width: 60%;
+        height: 350px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        .poster{
+            background-color: transparent;
+            #default-poster {
+                background-color: transparent;
+            }
+        }
+        
     }
 
     &__container {
@@ -91,6 +106,7 @@
         justify-content: flex-end;
     }
 }
+
 
 @media (max-width: 600px) {
     .beginning {

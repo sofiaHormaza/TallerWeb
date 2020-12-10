@@ -2332,7 +2332,9 @@ input[type=button] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #98dec8;
+  background-image: url("../images/glassesNewPage.jpg");
+  height: 88vh;
+  background-position: 55% 24%;
 }
 
 .beginning__container {
@@ -2367,11 +2369,20 @@ input[type=button] {
 
 .panel__model {
   width: 60%;
+  height: 350px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.panel__model .poster {
+  background-color: transparent;
+}
+
+.panel__model .poster #default-poster {
+  background-color: transparent;
 }
 
 .panel__container {
