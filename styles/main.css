@@ -2435,7 +2435,7 @@ input[type=button] {
           justify-content: flex-end;
 }
 
-.container {
+model-viewer #reveal {
   display: none;
 }
 
