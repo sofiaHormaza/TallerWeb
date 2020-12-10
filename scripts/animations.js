@@ -72,6 +72,16 @@ gsap.from(".fromRight", {
     x: 115,
 })
 
+gsap.from(".fromL", {
+    scrollTrigger: {
+        trigger: ".fromL",
+        start: "top center",
+    },
+    duration: 1,
+    opacity: 0,
+    x: -115,
+})
+
 //Animación títulos características
 gsap.from(".feature__title", {
     scrollTrigger: {
